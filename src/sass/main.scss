@@ -1,12 +1,7 @@
-/*
- * Главный файл стилей.
- * Все паршалы подключаются сюда.
- */
-
-// Стили для файла с примером HTML-фрагмента
 @import './example';
 @import './base/fonts';
-@import './base/variable';
-@import './base/mixines';
-@import './base/common';
+@import './utils/variable';
+@import './utils/mixines';
 @import './base/normalize';
+@import './base/common';
+@import './utils/variables-color';
