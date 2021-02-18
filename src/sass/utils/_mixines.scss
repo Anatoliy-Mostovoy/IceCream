@@ -3,3 +3,9 @@
   font-weight: $fweight;
   font-size: $fsize;
 }
+
+@mixin transition($property...) {
+  transition-property: $property;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
