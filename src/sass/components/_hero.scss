@@ -77,6 +77,7 @@
   padding: 137px 0 160px 20px;
   height: 476px;
   @media screen and (min-width: $tablet) {
+    display: flex;
     padding: 15px 34px 34px;
     height: 317px;
   }
@@ -178,10 +179,6 @@
   margin-bottom: 7px;
 }
 
-.outlets-list {
-  display: none;
-}
-
 .bio-img {
   display: none;
   opacity: 0;
@@ -264,5 +261,77 @@
     width: 293px;
     height: 232px;
     right: 0;
+  }
+}
+
+// outlets
+
+.outlets-list {
+  display: none;
+
+  opacity: 0;
+  margin-left: auto;
+  text-align: right;
+  margin-right: 8px;
+  font-weight: $add-fweight;
+  @media screen and (min-width: $tablet) {
+    display: block;
+    opacity: 1;
+  }
+}
+
+.outlets-item {
+  position: relative;
+}
+
+.outlets-item:not(:last-child) {
+  margin-bottom: 14px;
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 18px;
+  }
+}
+
+.outlets-number {
+  font-family: $add-ffamily;
+  font-size: 28px;
+
+  line-height: 1.14;
+  letter-spacing: 0.04em;
+  color: $primary-title-color;
+  @media screen and (min-width: $desktop) {
+    font-size: 46px;
+    line-height: 1.13;
+  }
+}
+
+.outlets-number::before {
+  content: '';
+
+  position: absolute;
+  top: -2px;
+  right: -10px;
+  display: block;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  background-color: $white-text-color;
+  @media screen and (min-width: $desktop) {
+    width: 30px;
+    height: 30px;
+    top: -4px;
+    right: -18px;
+  }
+}
+
+.outlets-type {
+  display: block;
+  font-size: 8px;
+
+  line-height: 1.25;
+  letter-spacing: 0em;
+  color: $white-text-color;
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+    line-height: 1.29;
   }
 }
