@@ -1,0 +1,18 @@
+.section-subtitle {
+  @include font($add-ffamily, $add-fweight, 20px);
+
+  font-style: normal;
+  letter-spacing: 0.04em;
+  text-align: center;
+  text-transform: uppercase;
+  color: $text-color;
+
+  @media screen and (max-width: $tablet) {
+    line-height: 1.15;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 30px;
+    line-height: 1.13;
+  }
+}

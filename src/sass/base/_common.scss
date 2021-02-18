@@ -1,22 +1,23 @@
 body {
   @include font($main-ffamily, $main-fweight, $main-fsize-mobile);
   font-style: normal;
-  color: #000;
+  color: $text-color;
 
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
+  @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
     font-size: $main-fsize-tablet;
   }
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: $desktop) {
     font-size: $main-fsize-desktop;
   }
 }
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
-.ul {
+ul {
   padding: 0px;
   margin: 0px;
   list-style: none;
@@ -24,12 +25,14 @@ a {
 
 h1,
 h2,
+h3,
+h4,
 p {
   margin-top: 0px;
   margin-bottom: 0px;
 }
 
-.img {
+img {
   display: block;
   max-width: 100%;
   height: auto;
