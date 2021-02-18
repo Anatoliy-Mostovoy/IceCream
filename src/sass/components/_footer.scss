@@ -2,7 +2,6 @@
   padding-top: 113px;
   padding-bottom: 25px;
   background-color: $background-color;
-  text-align: center;
 
   @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
     padding-top: 158px;
@@ -32,7 +31,7 @@
 }
 
 .footer-social {
-  display: flex;
+  display: inline-block;
   margin-bottom: 46px;
 
   @media screen and (min-width: $desktop) {
@@ -85,10 +84,16 @@
 
 .footer-contacts {
   padding: 0;
+  margin-left: auto;
 }
 .footer-contact {
   display: flex;
   font-size: $main-fsize-mobile;
+  font-family: $main-ffamily;
+  font-weight: 700;
+  line-height: 1, 86;
+
+  text-align: right;
 
   @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
     font-size: $main-fsize-tablet;
@@ -103,10 +108,11 @@
   color: $primary-title-color;
 }
 
-// .footer-border {
-//   border-top: 1px solid blue;
-//   padding-top: 50px;
-// }
+.footer-border {
+  border-top: 1px solid $lines-color;
+  padding: 22px 91px 25px 79px;
+  background-color: $background-color;
+}
 
 .footer-copyright {
   min-width: 150px;
