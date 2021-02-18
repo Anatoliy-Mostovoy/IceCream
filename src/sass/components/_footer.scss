@@ -2,6 +2,7 @@
   padding-top: 113px;
   padding-bottom: 25px;
   background-color: $background-color;
+  justify-content: center;
 
   @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
     padding-top: 158px;
@@ -17,6 +18,7 @@
 .footer-content {
   display: flex;
   flex-wrap: wrap;
+  vertical-align: baseline;
   justify-content: space-between;
   margin-bottom: 98px;
   // margin-bottom: 0;
@@ -112,7 +114,7 @@
 .footer-border {
   border-top: 1px solid $lines-color;
   padding: 22px 91px 25px 79px;
-  background-color: $background-color;
+  // background-color: $background-color;
 }
 
 .footer-copyright {
