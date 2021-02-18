@@ -5,6 +5,11 @@
   text-align: center;
   letter-spacing: 0.04em;
 
+  text-decoration: none;
+  background-image: repeating-linear-gradient(transparent, $lines-color 50%);
+  background-size: 100% 1px;
+  background-position: bottom;
+
   @media screen and (min-width: $tablet) {
     font-size: $main-fsize-tablet;
     line-height: 2.16;
