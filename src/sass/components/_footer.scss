@@ -34,7 +34,7 @@
 }
 
 .footer-social {
-  display: inline-block;
+  display: inline-flex;
   margin-bottom: 46px;
 
   @media screen and (min-width: $desktop) {
@@ -65,6 +65,12 @@
   background-color: $secondary-title-color;
   border-radius: 50%;
   color: $white-text-color;
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  background-color: $primary-title-color;
+  border-radius: 50%;
 }
 
 .footer-icon-github {
