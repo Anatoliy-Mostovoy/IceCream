@@ -1,0 +1,15 @@
+.footer {
+  padding-top: 113px;
+  padding-bottom: 25px;
+  background-color: $background-color;
+
+  @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
+    padding-top: 158px;
+    padding-bottom: 18px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 165px;
+    padding-bottom: 10px;
+  }
+}
