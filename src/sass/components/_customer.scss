@@ -6,9 +6,14 @@
   letter-spacing: 0.04em;
 
   text-decoration: none;
-  background-image: repeating-linear-gradient(transparent, $lines-color 50%);
-  background-size: 100% 1px;
-  background-position: bottom;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 99%,
+    #e1e1e1 1%,
+    #e1e1e1
+  );
+  background-size: 100% 28px;
 
   @media screen and (min-width: $tablet) {
     font-size: $main-fsize-tablet;
