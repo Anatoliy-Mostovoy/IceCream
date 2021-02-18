@@ -27,8 +27,6 @@
 
 .footer-title {
   margin-bottom: 43px;
-  // width: 234px;
-  // text-align: start;
 
   @media screen and (min-width: $tablet) {
     margin-bottom: 0;
@@ -136,10 +134,6 @@
   color: $primary-title-color;
 }
 
-// .footer-border {
-//   border-top: 1px solid $lines-color;
-//   padding: 22px 91px 25px 79px;
-// }
 .footer-copyright {
   min-width: 150px;
   display: flex;
