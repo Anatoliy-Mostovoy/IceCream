@@ -63,4 +63,17 @@
 
 .footer-contacts {
   display: flex;
+  font-size: $main-fsize-mobile;
+
+  @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
+    font-size: $main-fsize-tablet;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: $main-fsize-desktop;
+  }
+}
+
+.footer-tel {
+  color: $primary-title-color;
 }
