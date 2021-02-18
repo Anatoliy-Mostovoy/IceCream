@@ -1,0 +1,146 @@
+.hero {
+  position: relative;
+  background-color: $hero-background;
+}
+
+.ice-cream-img {
+  position: absolute;
+
+  bottom: 0;
+  right: 32px;
+  display: block;
+  background-image: url(../images/Mobile/big-iceCream.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  width: 171px;
+  height: 410px;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url('../images/Mobile/big-iceCream@2x.png');
+  }
+  @media screen and (min-width: $mobile) {
+    width: 143px;
+    height: 336px;
+    right: 247px;
+    background-image: url(../images/Tablet/big-iceCream.png);
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url('../images/Tablet/big-iceCream@2x.png');
+    }
+  }
+  @media screen and (min-width: $tablet) {
+    width: 143px;
+    height: 336px;
+    right: 247px;
+    background-image: url(../images/Desktop/big-iceCream.png);
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url('../images/Desktop/big-iceCream@2x.png');
+    }
+  }
+}
+
+.ice-cream-img::before {
+  content: '';
+  position: absolute;
+  top: -9px;
+  right: -94px;
+
+  display: block;
+  min-width: 346px;
+  height: 346px;
+  background-color: $secondary-title-color;
+  border-radius: 50%;
+  @media screen and (min-width: $tablet) {
+    top: -32px;
+    right: -110px;
+    width: 324px;
+    height: 324px;
+  }
+}
+
+.hero .container {
+  padding: 137px 0 160px 20px;
+  @media screen and (min-width: $tablet) {
+    padding: 15px 34px 34px;
+  }
+}
+
+.title-container {
+  position: relative;
+  z-index: 1;
+  max-width: 218px;
+}
+
+.title {
+  font-family: $add-ffamily;
+  font-weight: $add-fweight;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.text-title {
+  font-size: 26px;
+  line-height: 1.15;
+  letter-spacing: 0.04em;
+
+  color: $white-text-color;
+}
+
+.accent-title {
+  font-size: 48px;
+  line-height: 1;
+  letter-spacing: 0em;
+
+  color: $primary-title-color;
+}
+
+.hero-buttons {
+  display: flex;
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 66px;
+  }
+}
+
+.hero-button:not(:last-child) {
+  margin-right: 9px;
+}
+
+.hero-article {
+  display: none;
+
+  font-size: 8px;
+  font-weight: $add-fweight;
+  line-height: 1.5;
+  letter-spacing: 0em;
+
+  color: $white-text-color;
+
+  @media screen and (min-width: $tablet) {
+    display: block;
+    margin-left: 120px;
+    max-width: 114px;
+  }
+}
+
+.text-article {
+  margin-bottom: 7px;
+}
+
+.outlets-list {
+  display: none;
+}
+
+.bio-img {
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 124px;
+  height: 126px;
+}
