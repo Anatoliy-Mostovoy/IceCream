@@ -16,8 +16,8 @@
   left: 0px;
   bottom: 100px;
 
-  width: 100%;
-  min-height: 133px;
+  min-width: 320px;
+  height: 133px;
 
   background-size: cover;
   background-repeat: no-repeat;
@@ -35,9 +35,9 @@
   }
 
   @media screen and (min-width: $desktop) {
-  
+    left: 0;
     bottom: 0;
-    max-width: 1282px;
+    width: 1282px;
     height: 534px;
     background-image: url(../images/Desktop/sectionbg.png);
 
@@ -49,12 +49,18 @@
   }
 }
 
+.about-container{
+  position: relative;
+  z-index: 1;
+  background-color: transparent;
+}
+
 .section-label {
   text-align: center;
   margin-bottom: 26px;
 
   @media screen and (min-width: $tablet){
-    margin-bottom: 50px;
+    margin-bottom: 100px;
   }
 
   @media screen and (min-width: $desktop){
@@ -63,26 +69,41 @@
 }
 
 .description-block {
-  position: relative;
-  z-index: 1;
-  background-color: transparent;
   @media screen and (min-width: $tablet) {
     display: flex;
     justify-content: space-between;
   }
 }
 
-.cow-image {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.description {
+.description-thumb {
   width: 100%;
 
   @media screen and (min-width: $tablet) {
-    width: 50%;
+    width: calc((100% - 17px) / 2);
+    margin-top: -50px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: calc((100% - 74px) / 2);
+  }
+
+  .cow-image {
+    width: 100%;
+  }
+}
+
+.description-text {
+  width: 100%;
+
+  padding: 0 30px;
+
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 17px) / 2);
+    padding: 0;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: calc((100% - 74px) / 2);
   }
 }
 .main {
@@ -104,18 +125,20 @@
 }
 
 .additional {
-  margin-bottom: 20px;
+  margin-bottom: 17px;
   font-size: $main-fsize-mobile;
   line-height: 1.62;
   letter-spacing: 0.04em;
   color: $secondary-text-color;
 
   @media screen and (min-width: $tablet) {
+    margin-bottom: 62px;
     font-size: $main-fsize-tablet;
     line-height: 1.76;
   }
 
   @media screen and (min-width: $desktop) {
+    margin-bottom: 45px;
     line-height: 1.94;
   }
 
