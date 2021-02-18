@@ -41,8 +41,8 @@ overflow="hidden">
         <symbol id="icon-facebook" viewBox="0 0 16 32">
             <path d="M14.1 16h-4v14.8H4V16H1v-5.3h3V7.4c0-2.5 1.1-6.2 6.2-6.2h4.5v5h-3.3c-.5 0-1.3.3-1.3 1.5v3h4.6L14 16z"/>
         </symbol>
-        <symbol id="icon-hulf-arrow" viewBox="0 0 26 32">
-            <path stroke="var(--color4, #d41443)" stroke-linejoin="round" stroke-linecap="round" stroke-width="6.4" d="M5.2 3.2L19.3 16 5.2 28.8"/>
+        <symbol id="icon-hulf-arrow" viewBox="0 0 32 32">
+            <path d="M24.9 14.8L10.6.5C10.3.2 10 0 9.4 0s-.9.2-1.2.5l-1 1c-.8.7-.8 1.9 0 2.5L19 16 7 28a1.7 1.7 0 000 2.4l1 1c.4.4.8.6 1.3.6s1-.2 1.2-.5L25 17.2a1.7 1.7 0 000-2.5z"/>
         </symbol>
         <symbol id="icon-points" viewBox="0 0 139 32">
             <path d="M85.3 16a16 16 0 11-32 0 16 16 0 0132 0zM32 16a16 16 0 11-32 0 16 16 0 0132 0zM138.7 16a16 16 0 11-32 0 16 16 0 0132 0z"/>

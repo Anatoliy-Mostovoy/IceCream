@@ -1,0 +1,72 @@
+.header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 37px 0;
+  @media screen and (max-width: $max-mobile) {
+    max-width: $mobile;
+  }
+  @media screen and (max-width: $max-tablet) {
+    max-width: $tablet;
+  }
+  @media screen and (min-width: $desktop) {
+    max-width: $desktop;
+  }
+}
+
+// Логотип
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 200px;
+  margin-right: 20px;
+  font-family: $add-ffamily;
+  font-size: 25px;
+  line-height: 34px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: $primary-title-color;
+}
+.logo-circle {
+  display: inline-block;
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-color: $primary-title-color;
+  border-radius: 50%;
+  overflow: hidden;
+  .logo-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+    fill: $white-text-color;
+  }
+}
+
+// Навигация "хлебные крошки"
+.breadcrumb {
+  display: none;
+  @media screen and (min-width: $desktop) {
+    display: inline-flex;
+    &-item {
+      display: inline;
+    }
+  }
+}
+
+.menu-burger {
+  display: inline-flex;
+  .button {
+    display: none;
+
+    @media screen and (min-width: $tablet) {
+      display: block;
+    }
+  }
+}
