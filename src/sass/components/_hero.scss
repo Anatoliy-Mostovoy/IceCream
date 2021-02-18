@@ -1,0 +1,341 @@
+// MAIN
+
+.hero {
+  background-color: $hero-background;
+}
+
+.hero .container {
+  position: relative;
+  padding: 137px 0 160px 20px;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    padding: 15px 10px 34px 15px;
+  }
+  @media screen and (min-width: $desktop) {
+    padding: 84px 17px 102px 15px;
+  }
+}
+
+// -- TITLE --
+
+.hero .title-container {
+  position: relative;
+  z-index: 1;
+  max-width: 218px;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: $tablet) {
+    max-width: 162px;
+  }
+  @media screen and (min-width: $desktop) {
+    max-width: 277px;
+    margin-bottom: 25px;
+  }
+}
+
+.hero .title {
+  font-family: $add-ffamily;
+  font-weight: $add-fweight;
+  text-transform: uppercase;
+}
+
+.hero .text-title {
+  font-size: 26px;
+  line-height: 1.15;
+  letter-spacing: 0.04em;
+
+  color: $white-text-color;
+  @media screen and (min-width: $tablet) {
+    font-size: 22px;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 38px;
+  }
+}
+
+.hero .accent-title {
+  font-size: 48px;
+  line-height: 1;
+  letter-spacing: 0em;
+
+  color: $primary-title-color;
+  @media screen and (min-width: $tablet) {
+    font-size: 34px;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 56px;
+  }
+}
+
+// -- POSITION BUTTON --
+
+.hero-buttons {
+  display: flex;
+  position: relative;
+  z-index: 1;
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 66px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 112px;
+  }
+}
+
+.hero-button:not(:last-child) {
+  margin-right: 9px;
+}
+
+// -- ARTICLE --
+
+.hero-article {
+  display: none;
+
+  font-size: 8px;
+  font-weight: $add-fweight;
+  line-height: 1.5;
+  letter-spacing: 0em;
+
+  color: $white-text-color;
+
+  @media screen and (min-width: $tablet) {
+    display: block;
+    margin-left: 120px;
+    max-width: 114px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-left: 165px;
+    max-width: 200px;
+
+    font-size: 14px;
+  }
+}
+
+.hero .text-article {
+  margin-bottom: 7px;
+}
+
+// -- OUTLETS --
+
+.hero .outlets-list {
+  display: none;
+
+  margin-left: auto;
+  text-align: right;
+
+  font-weight: $add-fweight;
+  @media screen and (min-width: $tablet) {
+    display: block;
+  }
+}
+
+.hero .outlets-item {
+  position: relative;
+}
+
+.hero .outlets-item:not(:last-child) {
+  margin-bottom: 14px;
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 18px;
+  }
+}
+
+.hero .outlets-number {
+  font-family: $add-ffamily;
+  font-size: 28px;
+
+  line-height: 1.14;
+  letter-spacing: 0.04em;
+  color: $primary-title-color;
+  @media screen and (min-width: $desktop) {
+    font-size: 46px;
+    line-height: 1.13;
+  }
+}
+
+.hero .outlets-number::before {
+  content: '';
+
+  position: absolute;
+  top: -2px;
+  right: -10px;
+  display: block;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  background-color: $white-text-color;
+  @media screen and (min-width: $desktop) {
+    width: 30px;
+    height: 30px;
+    top: -4px;
+    right: -18px;
+  }
+}
+
+.hero .outlets-type {
+  display: block;
+  font-size: 8px;
+
+  line-height: 1.25;
+  letter-spacing: 0em;
+  color: $white-text-color;
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+    line-height: 1.29;
+  }
+}
+
+// -- IMAGE --
+
+.hero .ice-cream-img {
+  position: absolute;
+
+  bottom: 0;
+  right: 32px;
+  display: block;
+  background-image: url(../images/Mobile/big-iceCream.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  width: 171px;
+  height: 410px;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url('../images/Mobile/big-iceCream@2x.png');
+  }
+  @media screen and (min-width: $mobile) {
+    background-image: url(../images/Tablet/big-iceCream.png);
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url('../images/Tablet/big-iceCream@2x.png');
+    }
+  }
+  @media screen and (min-width: $tablet) {
+    width: 143px;
+    height: 336px;
+    right: 213px;
+    background-image: url(../images/Desktop/big-iceCream.png);
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url('../images/Desktop/big-iceCream@2x.png');
+    }
+  }
+  @media screen and (min-width: $desktop) {
+    width: 236px;
+    height: 557px;
+    right: 341px;
+  }
+}
+
+.hero .ice-cream-img::before {
+  content: '';
+  position: absolute;
+  top: -9px;
+  right: -94px;
+
+  display: block;
+  min-width: 346px;
+  height: 346px;
+  background-color: $secondary-title-color;
+  border-radius: 50%;
+  @media screen and (min-width: $tablet) {
+    top: -32px;
+    right: -110px;
+    width: 324px;
+    height: 324px;
+  }
+  @media screen and (min-width: $desktop) {
+    top: -56px;
+    right: -185px;
+    width: 538px;
+    height: 538px;
+  }
+}
+
+.hero .bio-img {
+  display: none;
+
+  position: absolute;
+  bottom: 28px;
+  left: 19px;
+  width: 124px;
+  height: 126px;
+  @media screen and (min-width: $mobile) {
+    background-image: url(../images/Tablet/milk.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url('../images/Tablet/milk@2x.png');
+    }
+  }
+  @media screen and (min-width: $tablet) {
+    display: block;
+
+    background-image: url(../images/Desktop/milk.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url('../images/Desktop/milk@2x.png');
+    }
+  }
+  @media screen and (min-width: $desktop) {
+    width: 188px;
+    height: 191px;
+    left: -23px;
+    bottom: 45px;
+  }
+}
+
+.hero .tasty-img {
+  display: none;
+
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 168px;
+  height: 133px;
+
+  background-image: url(../images/Tablet/tasty-girl.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url('../images/Tablet/tasty-girl@2x.png');
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: block;
+
+    background-image: url(../images/Desktop/tasty-girl.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url('../images/Desktop/tasty-girl@2x.png');
+    }
+  }
+  @media screen and (min-width: $desktop) {
+    width: 293px;
+    height: 232px;
+    right: 0;
+  }
+}
