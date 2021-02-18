@@ -1,15 +1,13 @@
-.lable-title {
+.label-title {
   font-family: $add-ffamily;
   font-style: normal;
   font-weight: $add-fweight;
+  font-size: 18px;
+  line-height: 1.16;
+
   text-align: center;
   text-transform: uppercase;
   color: $secondary-title-color;
-
-  @media screen and (max-width: $mobile) {
-    font-size: 18px;
-    line-height: 1.16;
-  }
 
   @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
     font-size: 26px;
