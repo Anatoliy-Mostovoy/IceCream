@@ -1,13 +1,15 @@
 .rev-slider {
-  margin-bottom: 132px;
+  margin: 0 auto;
   margin-bottom: 86px;
+  width: 280px;
 
-  @media screen and (min-width: $tablet) {
-    margin: 0px 60px;
+  @media screen and (max-width: $tablet) {
+    width: 620px;
     margin-bottom: 119px;
   }
 
   @media screen and (min-width: $desktop) {
+    width: 926px;
     margin-bottom: 132px;
   }
 }
@@ -15,7 +17,7 @@
 .photo {
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 15px;
+
   margin-bottom: 29px;
 
   @media screen and (min-width: $tablet) {
@@ -28,24 +30,24 @@
 }
 
 .text-bg {
-  padding: 43px 62px 26px 62px;
+  position: relative;
+  padding: 43px 66px 26px 57px;
   margin-bottom: 52px;
 
   background: $slider-background-color;
 
   @media screen and (min-width: $tablet) {
-    padding: 47px 80px 34px 80px;
+    padding: 30px 36px 28px 40px;
     margin-bottom: 42px;
   }
 
   @media screen and (min-width: $desktop) {
-    padding: 47px 90px 40px 86px;
+    padding: 47px 89px 39px 87px;
     margin-bottom: 34px;
   }
 }
 
 .text {
-  position: relative;
   font-size: $main-fsize-mobile;
   line-height: 2.55;
   text-align: center;
@@ -58,40 +60,40 @@
     #e1e1e1 1%,
     #e1e1e1
   );
-  background-size: 100% 30px;
+  background-size: 100%;
 
   @media screen and (min-width: $tablet) {
     font-size: $main-fsize-tablet;
     line-height: 2.16;
-    background-size: 100% 28px;
+    // background-size: 100% 28px;
   }
 
   @media screen and (min-width: $desktop) {
     font-size: $main-fsize-desktop;
     line-height: 1.86;
-    background-size: 100% 30px;
+    // background-size: 100% 30px;
   }
 }
 
 .text::before {
   content: '';
   position: absolute;
-  top: -10%;
-  left: -20%;
-
+  top: 47px;
+  left: 89px;
   width: 54px;
   height: 40px;
   background-image: url('/images/quotes.svg');
+  background-repeat: no-repeat;
+  background-position: center;
 
-  @media screen and (max-width: $tablet) {
-    background-repeat: no-repeat;
-    top: -15%;
-    left: -10%;
+  @media screen and (min-width: $tablet) {
+    top: 15px;
+    left: 5px;
   }
 
   @media screen and (min-width: $desktop) {
-    top: -16px;
-    left: -35px;
+    top: 35px;
+    left: 40px;
   }
 }
 
@@ -113,42 +115,22 @@
   }
 }
 
-// .name::before {
-//   content: '. . .';
-//   position: absolute;
-//   top: -25px;
-//   left: 50%;
-
-//   white-space: nowrap;
-//   float: left;
-
-//   color: #c7133e;
-// }
-
 .name::before {
   content: '';
   position: absolute;
-  top: -25px;
-  left: 50%;
-  transform: translateY(-50%);
-  width: 4px;
+  width: 12px;
   height: 4px;
-  margin: 0 10px;
-  border-radius: 50%;
-  background-color: #c7133e;
-  background-repeat: repeat-x;
-}
 
-// .name::before {
-//   background-image: radial-gradient(circle, currentcolor 1px, transparent 1px);
-//   background-position-y: bottom;
-//   background-size: 1ex 3px;
-//   background-repeat: repeat-x;
-//   height: 1em;
-// }
+  background-image: url('/images/dots.svg');
+  background-position: 45px 45px;
+  background-size: contain;
+  background-repeat: repeat;
+  order: 3;
+}
 
 /* Слайдер */
 // .slick-slider {
+//   min-width: 0;
 // }
 
 /* Слайдер запущен */
@@ -157,17 +139,31 @@
 /* Слайдер с точками */
 // .slick-slider.slick-dotted {
 // }
+
 /* Ограничивающая оболочка */
-// .slick-list {
-//   overflow: hidden;
-// }
+.slick-list {
+  overflow: hidden;
+}
+
 /* Лента слайдов */
-// .slick-track {
-//   display: flex;
-// }
+.slick-track {
+  display: flex;
+}
+
 /* Слайд */
-// .slick-slide {
-// }
+.slick-slide {
+  width: 280px;
+  margin-left: 10px;
+  margin-right: 10px;
+
+  @media screen and (min-width: $tablet) {
+    width: 620px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 926px;
+  }
+}
 /* Слайд активный (показывается) */
 // .slick-slide.slick-active {
 // }
@@ -187,14 +183,19 @@
   align-items: center;
   justify-content: center;
 }
+
 .slick-dots li {
   list-style: none;
   margin: 0px 18px;
 }
 
 /* Активная точка */
-// .slick-dots li.slick-active button {
-// }
+.slick-dots li.slick-active button {
+  background-image: url('/images/home.svg');
+  background-position: center;
+  background-color: transparent;
+  border-radius: 0%;
+}
 
 /* Элемент точки */
 .slick-dots button {
