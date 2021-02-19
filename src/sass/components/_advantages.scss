@@ -6,7 +6,7 @@
   display: block;
   margin: 0 -15px;
   padding-bottom: 97px;
-  @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
+  @media screen and (min-width: $tablet) {
     display: flex;
     padding-bottom: 140px;
   }
@@ -27,21 +27,37 @@
 .advantages-number {
   font-family: $add-ffamily;
   font-weight: $add-fweight;
-  font-size: 58px;
+  font-size: 36px;
   line-height: 1.14;
   text-align: left;
   letter-spacing: 0.04em;
   margin-bottom: 15px;
 
   color: $primary-title-color;
+  @media screen and (min-width: $tablet) {
+    font-size: 48px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 58px;
+  }
 }
 
 .advantages-text {
   font-family: DM Sans;
   font-weight: 700;
-  font-size: $main-fsize-desktop;
-  line-height: 1.86;
+  font-size: $main-fsize-mobile;
+  line-height: 1.7;
   letter-spacing: 0.04em;
 
   color: $text-color;
+  @media screen and (min-width: $tablet) {
+    font-size: $main-fsize-tablet;
+    line-height: 1.74;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: $main-fsize-desktop;
+    line-height: 1.76;
+  }
 }
