@@ -38,7 +38,7 @@
   @media screen and (min-width: $desktop) {
     left: 50%;
     transform: translateX(-50%);
-    bottom: 0;
+    bottom: -47px;
     width: 1282px;
     height: 534px;
     background-image: url(../images/Desktop/sectionbg.png);
@@ -51,7 +51,7 @@
   }
 }
 
-.about-container{
+.about-container {
   position: relative;
   z-index: 1;
   background-color: transparent;
@@ -61,11 +61,11 @@
   text-align: center;
   margin-bottom: 26px;
 
-  @media screen and (min-width: $tablet){
+  @media screen and (min-width: $tablet) {
     margin-bottom: 100px;
   }
 
-  @media screen and (min-width: $desktop){
+  @media screen and (min-width: $desktop) {
     margin-bottom: 106px;
   }
 }
@@ -151,5 +151,12 @@
     @media screen and (min-width: $desktop) {
       margin-top: 40px;
     }
+  }
+}
+
+.about-button {
+  .about-icon {
+    width: 8px;
+    height: 10px;
   }
 }
