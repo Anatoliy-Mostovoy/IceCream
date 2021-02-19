@@ -1,4 +1,5 @@
 .about {
+  position: relative;
   padding-top: 125px;
   padding-bottom: 39px;
 
@@ -10,66 +11,143 @@
   }
 }
 
+.about-overlay {
+  position: absolute;
+  left: 0px;
+  bottom: 100px;
+
+  min-width: 320px;
+  height: 133px;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../images/Mobile/sectionbg.png);
+
+  @media screen and (-webkit-min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url(../images/Mobile/sectionbg@2x.png);
+  }
+
+  @media screen and (min-width: $tablet) {
+    background-image: none;
+  }
+
+  @media screen and (min-width: $desktop) {
+    left: 0;
+    bottom: 0;
+    width: 1282px;
+    height: 534px;
+    background-image: url(../images/Desktop/sectionbg.png);
+
+    @media screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(../images/Desktop/sectionbg@2x.png);
+    }
+  }
+}
+
+.about-container{
+  position: relative;
+  z-index: 1;
+  background-color: transparent;
+}
+
 .section-label {
   text-align: center;
-  margin-bottom: 104px;
-  text-transform: uppercase;
+  margin-bottom: 26px;
+
+  @media screen and (min-width: $tablet){
+    margin-bottom: 100px;
+  }
+
+  @media screen and (min-width: $desktop){
+    margin-bottom: 106px;
+  }
 }
 
 .description-block {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     display: flex;
     justify-content: space-between;
   }
+}
+
+.description-thumb {
+  width: 100%;
+
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 17px) / 2);
+    margin-top: -50px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: calc((100% - 74px) / 2);
+  }
 
   .cow-image {
-    display: block;
     width: 100%;
-    height: auto;
+  }
 }
 
-.description {
+.description-text {
   width: 100%;
-  font-family: $main-ffamily;
-  font-weight: $main-fweight;
 
-  @media screen and (min-width: 768px) {
-    width: 50%;
+  padding: 0 30px;
+
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 17px) / 2);
+    padding: 0;
   }
 
-  .main {
-    margin-bottom: 35px;
-    font-size: $main-fsize-mobile;
-    line-height: 1.62;
-
-    color: $text-color;
-
-    @media screen and (min-width: 768px) {
-      font-size: $main-fsize-tablet;
-      line-height: 1.76;
-    }
-
-    @media screen and (min-width: 1280px) {
-      font-size: $main-fsize-desktop;
-      letter-spacing: 0.04em;
-    }
-  }
-
-  .additional {
-    margin-bottom: 20px;
-    font-size: $main-fsize-mobile;
-    line-height: 1.62;
-    color: $secondary-text-color;
-
-    @media screen and (min-width: 768px) {
-      font-size: $main-fsize-tablet;
-      line-height: 1.76;
-    }
-
-    @media screen and (min-width: 1280px) {
-      line-height: 1.94;
-      letter-spacing: 0.04em;
-    }
+  @media screen and (min-width: $desktop) {
+    width: calc((100% - 74px) / 2);
   }
 }
+.main {
+  margin-bottom: 35px;
+  font-size: $main-fsize-mobile;
+  line-height: 1.62;
+
+  color: $text-color;
+
+  @media screen and (min-width: $tablet) {
+    font-size: $main-fsize-tablet;
+    line-height: 1.76;
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: $main-fsize-desktop;
+    letter-spacing: 0.04em;
+  }
+}
+
+.additional {
+  margin-bottom: 17px;
+  font-size: $main-fsize-mobile;
+  line-height: 1.62;
+  letter-spacing: 0.04em;
+  color: $secondary-text-color;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 62px;
+    font-size: $main-fsize-tablet;
+    line-height: 1.76;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 45px;
+    line-height: 1.94;
+  }
+
+  &-end {
+    display: block;
+    margin-top: 23px;
+
+    @media screen and (min-width: $desktop) {
+      margin-top: 40px;
+    }
+  }
 }
