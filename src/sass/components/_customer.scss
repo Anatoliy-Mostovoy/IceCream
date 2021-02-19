@@ -35,6 +35,7 @@
   margin-bottom: 52px;
 
   background: $slider-background-color;
+  z-index: 1;
 
   @media screen and (min-width: $tablet) {
     padding: 30px 36px 28px 40px;
@@ -60,19 +61,18 @@
     #e1e1e1 1%,
     #e1e1e1
   );
-  background-size: 100% 30px;
-  z-index: 10;
+  // background-size: 100% 30px;
 
   @media screen and (min-width: $tablet) {
     font-size: $main-fsize-tablet;
     line-height: 2.16;
-    background-size: 100% 28px;
+    // background-size: 100% 28px;
   }
 
   @media screen and (min-width: $desktop) {
     font-size: $main-fsize-desktop;
     line-height: 1.86;
-    background-size: 100% 30px;
+    // background-size: 100% 30px;
   }
 }
 
@@ -81,14 +81,13 @@
   position: absolute;
   top: 47px;
   left: 89px;
-  // transform: translate(47px, 89px);
-
   width: 54px;
   height: 40px;
   background-image: url('/images/quotes.svg');
+  background-repeat: no-repeat;
+  background-position: center;
 
-  @media screen and (max-width: $tablet) {
-    background-repeat: no-repeat;
+  @media screen and (min-width: $tablet) {
     top: 15px;
     left: 5px;
   }
@@ -117,38 +116,13 @@
   }
 }
 
-// .name::before {
-//   content: '. . .';
-//   position: absolute;
-//   top: -25px;
-//   left: 50%;
-
-//   white-space: nowrap;
-//   float: left;
-
-//   color: #c7133e;
-// }
-
-// .name::before {
-//   content: '';
-//   position: absolute;
-//   top: -25px;
-//   left: 50%;
-//   transform: translateY(-50%);
-//   width: 4px;
-//   height: 4px;
-//   margin: 0 10px;
-//   border-radius: 50%;
-//   background-color: #c7133e;
-
-// }
-
-.name::before {
-  background-image: radial-gradient(circle, currentcolor 1px, transparent 1px);
-  background-position-y: bottom;
-  background-size: 1ex 3px;
-  background-repeat: repeat-x;
-  height: 1em;
+.text-bg::after {
+  content: '';
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  background-image: url('/images/dots.svg');
 }
 
 /* Слайдер */
