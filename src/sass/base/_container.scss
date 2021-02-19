@@ -9,6 +9,8 @@
 
   @media screen and (min-width: $tablet) {
     max-width: $tablet;
+    padding-left: 34px;
+    padding-right: 34px;
   }
 
   @media screen and (min-width: $desktop) {

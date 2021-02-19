@@ -39,7 +39,6 @@
   line-height: 1.5;
   letter-spacing: 0.04em;
 
-  text-align: center;
   color: $white-text-color;
 
   @media screen and (min-width: $tablet) {
@@ -51,8 +50,8 @@
   }
 
   @media screen and (min-width: $desktop) {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 44px;
+    padding-right: 44px;
     margin-bottom: 62px;
 
     font-size: $main-fsize-desktop;
@@ -79,9 +78,9 @@
   @media screen and (min-width: $tablet) {
     background-image: url('../images/Tablet/points-group-td.svg');
 
-    @media screen and (min-device-pixel-ratio: 2) and (min-width: $tablet),
-      screen and (min-resolution: 192dpi) and (min-width: $tablet),
-      screen and (min-resolution: 2dppx) and (min-width: $tablet) {
+    @media screen and (min-device-pixel-ratio: 2) and (min-width: $tablet) and (max-width: $max-tablet),
+      screen and (min-resolution: 192dpi) and (min-width: $tablet) and (max-width: $max-tablet),
+      screen and (min-resolution: 2dppx) and (min-width: $tablet) and (max-width: $max-tablet) {
       background-image: url('../images/Tablet/points-group-td@2x.svg');
       background-size: cover;
     }
@@ -171,24 +170,111 @@
 
     & .card-products {
       margin: 10px;
-      width: calc((100% - 3 * 20) / 3);
+      width: calc((100% - 3 * 20px) / 3);
     }
   }
 
-  // .card-products:not(:last-child) {
-  //   margin-right: 20px;
-  //   margin-bottom: 0;
-  // }
+  .card-products {
+    padding-top: 152px;
+    padding-bottom: 40px;
+
+    &::before {
+      top: -104px;
+      height: 226px;
+      width: 220px;
+    }
+
+    &:first-child::before {
+      background-image: url('../images/Tablet/ice-cream.png');
+
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        background-image: url('../images/Tablet/ice-cream@2x.png');
+        background-size: cover;
+      }
+    }
+
+    &:nth-child(2)::before {
+      height: 233px;
+
+      background-image: url('../images/Tablet/ice-coffee.png');
+
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        background-image: url('../images/Tablet/ice-coffee@2x.png');
+        background-size: cover;
+      }
+    }
+
+    &:last-child::before {
+      background-image: url('../images/Tablet/milkshake.png');
+
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        background-image: url('../images/Tablet/milkshake@2x.png');
+        background-size: cover;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: $desktop) {
   .list-products {
     display: flex;
-    margin: -12px;
+    margin: -15px;
 
     & .card-products {
-      margin: 12px;
-      width: calc((100% - 3 * 24) / 3);
+      margin: 15px;
+      width: calc((100% - 3 * 30px) / 3);
+    }
+  }
+
+  .card-products {
+    padding-top: 163px;
+    padding-bottom: 50px;
+
+    &::before {
+      top: -210px;
+      height: 335px;
+      width: 335px;
+    }
+
+    &:first-child::before {
+      background-image: url('../images/Desktop/ice-cream.png');
+
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        background-image: url('../images/Desktop/ice-cream@2x.png');
+        background-size: cover;
+      }
+    }
+
+    &:nth-child(2)::before {
+      height: 337px;
+
+      background-image: url('../images/Desktop/ice-coffee.png');
+
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        background-image: url('../images/Desktop/ice-coffee@2x.png');
+        background-size: cover;
+      }
+    }
+
+    &:last-child::before {
+      background-image: url('../images/Desktop/milkshakes.png');
+
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        background-image: url('../images/Desktop/milkshakes@2x.png');
+        background-size: cover;
+      }
     }
   }
 }
