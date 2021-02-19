@@ -1,5 +1,16 @@
 .contacts {
-  background-color: $mobile-menu-color; //test
+  .contacts-container {
+    /*position: relative;*/
+    background-color: transparent;
+  }
+
+  .contacts-overlay {
+    /*position: absolute;*/
+    left: 0px;
+    bottom: 84px; //102px desktop
+
+    min-width: 320px;
+  }
 
   .contacts-hidden {
     opacity: 0;
@@ -7,11 +18,14 @@
   }
 
   .contacts-list {
+    justify-content: center;
+    align-items: center;
+    margin-top: -20px;
+
     @media screen and (min-width: $tablet) {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      flex-direction: column;
 
       &:not(:last-child) {
         margin-right: 20px;
@@ -25,56 +39,143 @@
     border-radius: 24px;
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
 
-    padding: 51px 44px 62px 43px;
+    margin-top: 20px;
+    padding: 43px 20px;
     max-width: 220px;
     height: auto;
 
     @media screen and (min-width: $tablet) {
+      padding: 50px 31px;
     }
 
     @media screen and (min-width: $desktop) {
+      padding: 51px 44px 62px 43px;
       max-width: 330px;
     }
   }
 
   .card-label {
+    padding: 1px 15px;
     background-color: $ice-coffee-background;
+    border: none;
+    border-radius: 6px;
+    text-transform: uppercase;
+    color: $white-text-color;
+    font-size: $main-fsize-mobile;
+    margin-bottom: 25px;
+
+    @media screen and (min-width: $tablet) {
+      font-size: $main-fsize-desktop;
+      margin-bottom: 30px;
+    }
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 32px;
+    }
   }
 
   .card-label-2 {
     background-color: $milkshakes-background;
+    border: none;
+    border-radius: 6px;
+    text-transform: uppercase;
+    color: $white-text-color;
+    font-size: $main-fsize-mobile;
+
+    @media screen and (min-width: $tablet) {
+      font-size: $main-fsize-desktop;
+      margin-bottom: 30px;
+    }
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 32px;
+    }
   }
 
   .dark-title {
-    margin-top: 32px;
+    margin-top: 10px;
+
+    @media screen and (min-width: $tablet) {
+      margin-top: 15px;
+    }
   }
 
   .card-time {
     line-height: 26px;
     color: $secondary-title-color;
+    margin-top: 2px;
   }
 
   .card-subscription {
     color: $secondary-text-color;
     margin-top: 10px;
+    line-height: 18px;
+
+    @media screen and (min-width: $tablet) {
+      line-height: 26px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      line-height: 29px;
+    }
   }
 
   .card-line {
     border: 1px solid $lines-color;
-    margin: 30px auto;
+    margin: 25px auto;
+    @media screen and (min-width: $tablet) {
+      margin: 30px auto;
+    }
+    @media screen and (min-width: $tablet) {
+      margin: 32px auto;
+    }
   }
 
   .contacts-link {
     color: $secondary-text-color;
-  }
-
-  .contacts-button {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 55px;
+    line-height: 18px;
 
     @media screen and (min-width: $tablet) {
+      line-height: 26px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      line-height: 29px;
+    }
+  }
+
+  .contacts-buttons {
+    margin-top: 55px;
+    justify-content: center;
+    margin-bottom: -10px;
+
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      flex-wrap: wrap;
       margin-top: 80px;
+    }
+  }
+
+  .button {
+    margin-bottom: 10px;
+    width: 170px;
+    @media screen and (min-width: $tablet) {
+      width: 100%;
+    }
+  }
+
+  .contacts-icon {
+    width: 8px;
+    height: 10px;
+  }
+
+  /* Contacts location buttons */
+
+  .location-button {
+    background-color: $primary-title-color;
+    color: $white-text-color;
+    fill: $white-text-color;
+
+    &:last-child {
+      margin-right: 15px;
     }
   }
 }
