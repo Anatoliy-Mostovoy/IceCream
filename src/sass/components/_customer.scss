@@ -1,13 +1,14 @@
 .rev-slider {
-  // margin: 0px -50px;
+  width: 280px;
   margin-bottom: 86px;
 
   @media screen and (min-width: $tablet) {
-    // margin: 0px -55px;
+    width: 620px;
     margin-bottom: 119px;
   }
 
   @media screen and (min-width: $desktop) {
+    width: 926px;
     // margin: 0px -50px;
     margin-bottom: 132px;
   }
@@ -29,6 +30,7 @@
 }
 
 .text-bg {
+  position: relative;
   padding: 43px 66px 26px 57px;
   margin-bottom: 52px;
 
@@ -46,7 +48,6 @@
 }
 
 .text {
-  position: relative;
   font-size: $main-fsize-mobile;
   line-height: 2.55;
   text-align: center;
@@ -78,8 +79,9 @@
 .text::before {
   content: '';
   position: absolute;
-  top: -10%;
-  left: -20%;
+  top: 47px;
+  left: 89px;
+  // transform: translate(47px, 89px);
 
   width: 54px;
   height: 40px;
@@ -87,13 +89,13 @@
 
   @media screen and (max-width: $tablet) {
     background-repeat: no-repeat;
-    top: -15%;
-    left: -10%;
+    top: 15px;
+    left: 5px;
   }
 
   @media screen and (min-width: $desktop) {
-    top: -16px;
-    left: -35px;
+    top: 35px;
+    left: 40px;
   }
 }
 
@@ -177,16 +179,14 @@
 
 /* Слайд */
 .slick-slide {
-  list-style: none;
-
-  margin: 0px 50px;
+  width: 280px;
 
   @media screen and (min-width: $tablet) {
-    margin: 0px 55px;
+    width: 620px;
   }
 
   @media screen and (min-width: $desktop) {
-    margin: 0px 50px;
+    width: 926px;
   }
 }
 /* Слайд активный (показывается) */
