@@ -1,6 +1,7 @@
 // // MAIN
 
 .hero-container {
+  position: relative;
   padding-top: 137px;
   @media screen and (min-width: $tablet) {
     padding-top: 15px;
@@ -9,20 +10,6 @@
     padding: 84px 0 0 69px;
   }
 }
-
-// .hero-container  {
-//   position: relative;
-
-//   overflow: hidden;
-
-//   @media screen and (min-width: $tablet) {
-//     display: flex;
-//     padding: 15px 10px 34px 15px;
-//   }
-//   @media screen and (min-width: $desktop) {
-//     padding: 84px 17px 56px 15px;
-//   }
-// }
 
 // // -- TITLE --
 
@@ -126,44 +113,51 @@
 
 .hero-container .outlets-list {
   display: none;
+  position: absolute;
+  top: 14px;
+  right: 0;
 
   margin-left: auto;
   text-align: right;
   padding-right: 10px;
 
   font-weight: $add-fweight;
-  // @media screen and (min-width: $tablet) {
-  //   display: block;
-  // }
+  @media screen and (min-width: $tablet) {
+    display: block;
+  }
+  @media screen and (min-width: $desktop) {
+    top: 73px;
+    right: -18px;
+  }
 }
 
-// .hero-container .outlets-item {
-//   position: relative;
-//   display: block;
-// }
+.hero-container .outlets-item {
+  position: relative;
+  display: block;
+}
 
-// .hero-container .outlets-item:not(:last-child) {
-//   margin-bottom: 14px;
-//   @media screen and (min-width: $desktop) {
-//     margin-bottom: 18px;
-//   }
-// }
+.hero-container .outlets-item:not(:last-child) {
+  margin-bottom: 14px;
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 18px;
+  }
+}
 
-// .hero-container .outlets-number {
-//   position: relative;
-//   transform-style: preserve-3d;
+.hero-container .outlets-number {
+  position: relative;
+  transform-style: preserve-3d;
 
-//   font-family: $add-ffamily;
-//   font-size: 28px;
+  font-family: $add-ffamily;
+  font-size: 28px;
 
-//   line-height: 1.14;
-//   letter-spacing: 0.04em;
-//   color: $primary-title-color;
-//   @media screen and (min-width: $desktop) {
-//     font-size: 46px;
-//     line-height: 1.13;
-//   }
-// }
+  line-height: 1.14;
+  letter-spacing: 0.04em;
+  color: $primary-title-color;
+  @media screen and (min-width: $desktop) {
+    font-size: 46px;
+    line-height: 1.13;
+  }
+}
 
 .hero-container .circle {
   position: absolute;
@@ -315,7 +309,7 @@
   }
 }
 
-.header-container .tasty-img {
+.header .tasty-img {
   display: none;
 
   position: absolute;
@@ -352,6 +346,6 @@
   @media screen and (min-width: $desktop) {
     width: 293px;
     height: 232px;
-    right: 0px;
+    right: 115px;
   }
 }

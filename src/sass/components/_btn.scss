@@ -26,6 +26,14 @@
     width: 26px;
     height: 26px;
   }
+  &-icon {
+    width: 10px;
+    height: 10px;
+    @media screen and (min-width: $desktop) {
+      width: 10px;
+      height: 10px;
+    }
+  }
 }
 
 // -- BUTTON --
