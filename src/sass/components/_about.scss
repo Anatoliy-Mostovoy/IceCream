@@ -13,7 +13,8 @@
 
 .about-overlay {
   position: absolute;
-  left: 0px;
+  left: 50%;
+  transform: translateX(-50%);
   bottom: 100px;
 
   min-width: 320px;
@@ -35,7 +36,8 @@
   }
 
   @media screen and (min-width: $desktop) {
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: 0;
     width: 1282px;
     height: 534px;
