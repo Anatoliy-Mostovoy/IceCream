@@ -1,15 +1,22 @@
 .contacts {
-  .contacts-container {
-    /*position: relative;*/
-    background-color: transparent;
+  background-color: $background-color;
+
+  background-image: linear-gradient(#ffffff, $background-color 25%);
+
+  @media screen and (min-width: $desktop) {
+    background-size: cover;
+    background-position: center;
+    background-image: url(../images/Desktop/sectionbg-drops.png),
+      linear-gradient(#ffffff, $background-color 25%);
   }
 
-  .contacts-overlay {
-    /*position: absolute;*/
-    left: 0px;
-    bottom: 84px; //102px desktop
-
-    min-width: 320px;
+  .contacts-container {
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
   }
 
   .contacts-hidden {
@@ -35,7 +42,6 @@
 
   .contacts-card {
     background-color: #ffffff;
-    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
     border-radius: 24px;
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
 
@@ -45,11 +51,13 @@
     height: auto;
 
     @media screen and (min-width: $tablet) {
-      padding: 50px 31px;
+      padding: 50px 30px;
+      width: calc((100% - 50px) / 3);
     }
 
     @media screen and (min-width: $desktop) {
       padding: 51px 44px 62px 43px;
+      width: calc((100% - 90px) / 3);
       max-width: 330px;
     }
   }
@@ -142,7 +150,8 @@
     }
   }
 
-  .contacts-buttons {
+  /* Contacts location buttons */
+  .contacts-buttons-list {
     margin-top: 55px;
     justify-content: center;
     margin-bottom: -10px;
@@ -154,11 +163,10 @@
     }
   }
 
-  .button {
-    margin-bottom: 10px;
-    width: 170px;
+  .contacts-buttons-item {
     @media screen and (min-width: $tablet) {
-      width: 100%;
+      margin-bottom: 10px;
+      margin-right: 15px;
     }
   }
 
@@ -167,15 +175,17 @@
     height: 10px;
   }
 
-  /* Contacts location buttons */
-
   .location-button {
     background-color: $primary-title-color;
     color: $white-text-color;
     fill: $white-text-color;
+  }
 
-    &:last-child {
-      margin-right: 15px;
+  .button {
+    margin-bottom: 10px;
+    width: 170px;
+    @media screen and (min-width: $tablet) {
+      width: 100%;
     }
   }
 }
