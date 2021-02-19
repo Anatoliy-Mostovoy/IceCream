@@ -1,19 +1,21 @@
 .header {
-  position: fixed;
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
   padding: 37px 0;
+  background: transparent;
 
-  @media screen and (max-width: $max-mobile) {
-    max-width: $mobile;
-  }
-  @media screen and (max-width: $max-tablet) {
-    max-width: $tablet;
-  }
-  @media screen and (min-width: $desktop) {
-    max-width: $desktop;
-  }
+  // @media screen and (max-width: $max-mobile) {
+  //   max-width: $mobile;
+  // }
+  // @media screen and (min-width: $tablet) {
+  //   max-width: $tablet;
+  // }
+  // @media screen and (min-width: $desktop) {
+  //   max-width: $desktop;
+  // }
 }
 
 // Логотип
@@ -65,6 +67,13 @@
     }
     &-item:not(:last-child) {
       margin-right: 35px;
+    }
+    .active {
+      color: $primary-title-color;
+    }
+    &-item:hover,
+    &-item:focus {
+      color: $primary-title-color;
     }
   }
 }
