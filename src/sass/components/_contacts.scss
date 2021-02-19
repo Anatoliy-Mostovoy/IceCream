@@ -1,14 +1,14 @@
 .contacts {
   background-color: $background-color;
 
-  background-image: linear-gradient(#ffffff, $background-color 25%);
+  background-image: linear-gradient(to bottom, #ffffff, $background-color 25%);
 
-  @media screen and (min-width: $desktop) {
+  /*@media screen and (min-width: $desktop) {
     background-size: cover;
     background-position: center;
     background-image: url(../images/Desktop/sectionbg-drops.png),
       linear-gradient(#ffffff, $background-color 25%);
-  }
+  }*/
 
   .contacts-container {
     margin: auto;
