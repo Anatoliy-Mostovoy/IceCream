@@ -1,15 +1,15 @@
 .rev-slider {
-  width: 280px;
+  margin: 0 auto;
   margin-bottom: 86px;
+  width: 280px;
 
-  @media screen and (min-width: $tablet) {
+  @media screen and (max-width: $tablet) {
     width: 620px;
     margin-bottom: 119px;
   }
 
   @media screen and (min-width: $desktop) {
     width: 926px;
-    // margin: 0px -50px;
     margin-bottom: 132px;
   }
 }
@@ -173,13 +173,11 @@
   display: flex;
 }
 
-// .slick-list.draggable {
-//   padding: 0;
-// }
-
 /* Слайд */
 .slick-slide {
   width: 280px;
+  margin-left: 10px;
+  margin-right: 10px;
 
   @media screen and (min-width: $tablet) {
     width: 620px;
