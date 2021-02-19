@@ -1,9 +1,13 @@
 <section class="contacts">
     <h2 class="contacts-hidden">Ice Cream contacts</h2>
-    <div class="container">
+    <div class="container contacts-container">
+        <div class="contacts-overlay">
+            <!-- Contacts cards-->
         <ul class="contacts-list">
             <li class="contacts-card">
-                    <p class="card-label">Cafe</p>
+                    <button type="button"
+                    class="card-label"
+                    > Cafe </button>
                     <p  class="dark-title">Chicago</p>
                     <p class="card-subscription">Fusce ut velit laoreet, tempus arcu molestie vulputate</p>
                     <hr  class="card-line">
@@ -21,7 +25,9 @@
                     
             </li>
             <li class="contacts-card">
-                    <p class="card-label-2">Food truck</p>
+                    <button type="button" 
+                    class="card-label-2"
+                    > Food truck </button>
                     <p  class="dark-title">Los Angeles</p>
                     <p class="card-subscription">Fusce ut velit laoreet, tempus arcu molestie vulputate</p>
                     <hr class="card-line">
@@ -38,7 +44,9 @@
                     </a>
             </li>
             <li class="contacts-card">
-                    <p class="card-label">Cafe</p>
+                    <button type="button" 
+                    class="card-label"
+                    >Cafe</button>
                     <p  class="dark-title">New York</p>
                     <p class="card-subscription">Fusce ut velit laoreet, tempus arcu molestie vulputate</p>
                     <hr class="card-line">
@@ -55,14 +63,25 @@
                     </a>
             </li>
         </ul>
-    
+    <!-- Contacts location buttons-->
     <ul class="contacts-buttons">
         <li>
-            <button type="button" class="contacts-button-arrow">Our Locations</button>
+            <button type="button " 
+            class="button location-button"
+            >Our Locations
+            <svg class="button-icon contacts-icon" width="8" height="10">
+                <use href="./images/symbol-defs.svg#icon-hulf-arrow" />
+            </svg></button>
         </li>
         <li>
-            <button type="button" class="contacts-button-arrow">Franchise</button>
+            <button type="button" 
+            class="button "
+            >Franchise
+            <svg class="button-icon contacts-icon" width="8" height="10">
+                <use href="./images/symbol-defs.svg#icon-hulf-arrow" />
+            </svg></button>
         </li>
     </ul>
+    </div>
 </div>
 </section>
