@@ -35,7 +35,6 @@
   margin-bottom: 52px;
 
   background: $slider-background-color;
-  z-index: 1;
 
   @media screen and (min-width: $tablet) {
     padding: 30px 36px 28px 40px;
@@ -61,7 +60,7 @@
     #e1e1e1 1%,
     #e1e1e1
   );
-  // background-size: 100% 30px;
+  background-size: 100%;
 
   @media screen and (min-width: $tablet) {
     font-size: $main-fsize-tablet;
@@ -116,13 +115,17 @@
   }
 }
 
-.text-bg::after {
+.name::before {
   content: '';
-  top: 0;
-  left: 0;
-  width: 4px;
+  position: absolute;
+  width: 12px;
   height: 4px;
+
   background-image: url('/images/dots.svg');
+  background-position: 45px 45px;
+  background-size: contain;
+  background-repeat: repeat;
+  order: 3;
 }
 
 /* Слайдер */
