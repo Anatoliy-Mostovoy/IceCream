@@ -2,6 +2,7 @@
   padding-top: 113px;
   padding-bottom: 25px;
   background-color: $background-color;
+  justify-content: center;
 
   @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
     padding-top: 158px;
@@ -17,10 +18,11 @@
 .footer-content {
   display: flex;
   flex-wrap: wrap;
+  vertical-align: baseline;
   justify-content: space-between;
   margin-bottom: 98px;
-  // margin-bottom: 0;
   text-align: end;
+  align-items: baseline;
 }
 
 .footer-title {
@@ -31,8 +33,25 @@
   }
 }
 
+.label-title.label-footer,
+.section-title.title-footer {
+  display: block;
+  margin-bottom: 15px;
+  width: 234px;
+  text-align: start;
+
+  @media screen and (min-width: $tablet) {
+    width: 340px;
+    margin-bottom: 16px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 500px;
+    margin-bottom: 17px;
+  }
+}
+
 .footer-social {
-  display: inline-block;
+  display: inline-flex;
   margin-bottom: 46px;
 
   @media screen and (min-width: $desktop) {
@@ -65,6 +84,12 @@
   color: $white-text-color;
 }
 
+.footer-link:hover,
+.footer-link:focus {
+  background-color: $primary-title-color;
+  border-radius: 50%;
+}
+
 .footer-icon-github {
   width: 20px;
   height: 20px;
@@ -92,7 +117,7 @@
   font-size: $main-fsize-mobile;
   font-family: $main-ffamily;
   font-weight: 700;
-  line-height: 1, 86;
+  line-height: 1.86;
 
   text-align: right;
 
@@ -109,19 +134,12 @@
   color: $primary-title-color;
 }
 
-.footer-border {
-  border-top: 1px solid $lines-color;
-  padding: 22px 91px 25px 79px;
-  background-color: $background-color;
-}
-
 .footer-copyright {
   min-width: 150px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding: 0;
-  // margin: 0 auto;
   font-family: $main-ffamily;
   font-style: normal;
   font-weight: 700;

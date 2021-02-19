@@ -13,7 +13,7 @@
     padding: 15px 10px 34px 15px;
   }
   @media screen and (min-width: $desktop) {
-    padding: 84px 17px 102px 15px;
+    padding: 84px 17px 56px 15px;
   }
 }
 
@@ -82,7 +82,7 @@
   }
 }
 
-.hero-button:not(:last-child) {
+.hero .button:not(:last-child) {
   margin-right: 9px;
 }
 
@@ -122,6 +122,7 @@
 
   margin-left: auto;
   text-align: right;
+  padding-right: 10px;
 
   font-weight: $add-fweight;
   @media screen and (min-width: $tablet) {
@@ -131,6 +132,7 @@
 
 .hero .outlets-item {
   position: relative;
+  display: block;
 }
 
 .hero .outlets-item:not(:last-child) {
@@ -141,6 +143,9 @@
 }
 
 .hero .outlets-number {
+  position: relative;
+  transform-style: preserve-3d;
+
   font-family: $add-ffamily;
   font-size: 28px;
 
@@ -153,12 +158,12 @@
   }
 }
 
-.hero .outlets-number::before {
-  content: '';
-
+.hero .circle {
   position: absolute;
-  top: -2px;
-  right: -10px;
+  top: -4px;
+  right: -9px;
+  z-index: 0;
+
   display: block;
   border-radius: 50%;
   width: 16px;
@@ -167,8 +172,8 @@
   @media screen and (min-width: $desktop) {
     width: 30px;
     height: 30px;
-    top: -4px;
-    right: -18px;
+    right: -15px;
+    top: -7px;
   }
 }
 
@@ -189,6 +194,7 @@
 
 .hero .ice-cream-img {
   position: absolute;
+  transform-style: preserve-3d;
 
   bottom: 0;
   right: 32px;
@@ -235,6 +241,7 @@
 .hero .ice-cream-img::before {
   content: '';
   position: absolute;
+  transform: translateZ(-1px);
   top: -9px;
   right: -94px;
 
@@ -294,7 +301,7 @@
   @media screen and (min-width: $desktop) {
     width: 188px;
     height: 191px;
-    left: -23px;
+    left: -38px;
     bottom: 45px;
   }
 }
