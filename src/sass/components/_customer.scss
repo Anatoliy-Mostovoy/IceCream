@@ -1,45 +1,14 @@
-.text {
-  position: relative;
-  font-size: $main-fsize-mobile;
-  line-height: 2.55;
-  text-align: center;
-  letter-spacing: 0.04em;
-
-  text-decoration: none;
-  background-image: repeating-linear-gradient(
-    to bottom,
-    transparent,
-    transparent 99%,
-    #e1e1e1 1%,
-    #e1e1e1
-  );
-  background-size: 100% 28px;
+.rev-slider {
+  margin-bottom: 132px;
+  margin-bottom: 86px;
 
   @media screen and (min-width: $tablet) {
-    font-size: $main-fsize-tablet;
-    line-height: 2.16;
+    margin: 0px 60px;
+    margin-bottom: 119px;
   }
 
   @media screen and (min-width: $desktop) {
-    font-size: $main-fsize-desktop;
-    line-height: 1.86;
-  }
-}
-
-.name {
-  margin-bottom: 35px;
-
-  font-size: $main-fsize-tablet;
-  line-height: 1.86;
-
-  text-align: center;
-
-  @media screen and (min-width: $tablet) {
-    font-size: $main-fsize-desktop;
-  }
-
-  @media screen and (min-width: $desktop) {
-    font-size: 20px;
+    margin-bottom: 132px;
   }
 }
 
@@ -60,15 +29,47 @@
 
 .text-bg {
   padding: 43px 62px 26px 62px;
+  margin-bottom: 52px;
 
   background: $slider-background-color;
 
   @media screen and (min-width: $tablet) {
     padding: 47px 80px 34px 80px;
+    margin-bottom: 42px;
   }
 
   @media screen and (min-width: $desktop) {
     padding: 47px 90px 40px 86px;
+    margin-bottom: 34px;
+  }
+}
+
+.text {
+  position: relative;
+  font-size: $main-fsize-mobile;
+  line-height: 2.55;
+  text-align: center;
+  letter-spacing: 0.04em;
+
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 99%,
+    #e1e1e1 1%,
+    #e1e1e1
+  );
+  background-size: 100% 30px;
+
+  @media screen and (min-width: $tablet) {
+    font-size: $main-fsize-tablet;
+    line-height: 2.16;
+    background-size: 100% 28px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: $main-fsize-desktop;
+    line-height: 1.86;
+    background-size: 100% 30px;
   }
 }
 
@@ -94,30 +95,57 @@
   }
 }
 
-.text-bg::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  fill: #c7133e;
-}
+.name {
+  position: relative;
+  margin-bottom: 35px;
 
-.rev-slider {
-  margin-bottom: 132px;
-  margin-bottom: 86px;
+  font-size: $main-fsize-tablet;
+  line-height: 1.86;
+
+  text-align: center;
 
   @media screen and (min-width: $tablet) {
-    margin: 0px 60px;
-    margin-bottom: 119px;
+    font-size: $main-fsize-desktop;
   }
 
   @media screen and (min-width: $desktop) {
-    margin-bottom: 132px;
+    font-size: 20px;
   }
 }
+
+// .name::before {
+//   content: '. . .';
+//   position: absolute;
+//   top: -25px;
+//   left: 50%;
+
+//   white-space: nowrap;
+//   float: left;
+
+//   color: #c7133e;
+// }
+
+.name::before {
+  content: '';
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 4px;
+  margin: 0 10px;
+  border-radius: 50%;
+  background-color: #c7133e;
+  background-repeat: repeat-x;
+}
+
+// .name::before {
+//   background-image: radial-gradient(circle, currentcolor 1px, transparent 1px);
+//   background-position-y: bottom;
+//   background-size: 1ex 3px;
+//   background-repeat: repeat-x;
+//   height: 1em;
+// }
 
 /* Слайдер */
 // .slick-slider {
