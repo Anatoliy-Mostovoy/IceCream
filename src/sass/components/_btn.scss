@@ -11,10 +11,20 @@
 
   background-color: $white-text-color;
   color: $primary-title-color;
+
   &-icon {
     fill: currentColor;
     width: 20px;
     height: 12px;
+  }
+}
+
+.header .btn {
+  width: 18px;
+  height: 18px;
+  @media screen and (min-width: $desktop) {
+    width: 26px;
+    height: 26px;
   }
 }
 
@@ -96,7 +106,7 @@
   }
 }
 
-.hero .button {
+.hero-container .button {
   height: 24px;
   padding: 0 13px;
   font-weight: $add-fweight;

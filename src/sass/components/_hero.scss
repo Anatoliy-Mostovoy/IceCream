@@ -1,25 +1,32 @@
-// MAIN
+// // MAIN
 
-.hero {
-  background-color: $hero-background;
-}
-
-.hero .container {
-  position: relative;
-  padding: 137px 0 160px 20px;
-
+.hero-container {
+  padding-top: 137px;
   @media screen and (min-width: $tablet) {
-    display: flex;
-    padding: 15px 10px 34px 15px;
+    padding-top: 15px;
   }
   @media screen and (min-width: $desktop) {
-    padding: 84px 17px 56px 15px;
+    padding: 84px 0 0 69px;
   }
 }
 
-// -- TITLE --
+// .hero-container  {
+//   position: relative;
 
-.hero .title-container {
+//   overflow: hidden;
+
+//   @media screen and (min-width: $tablet) {
+//     display: flex;
+//     padding: 15px 10px 34px 15px;
+//   }
+//   @media screen and (min-width: $desktop) {
+//     padding: 84px 17px 56px 15px;
+//   }
+// }
+
+// // -- TITLE --
+
+.hero-container .title-container {
   position: relative;
   z-index: 1;
   max-width: 218px;
@@ -34,13 +41,13 @@
   }
 }
 
-.hero .title {
+.hero-container .title {
   font-family: $add-ffamily;
   font-weight: $add-fweight;
   text-transform: uppercase;
 }
 
-.hero .text-title {
+.hero-container .text-title {
   font-size: 26px;
   line-height: 1.15;
   letter-spacing: 0.04em;
@@ -54,7 +61,7 @@
   }
 }
 
-.hero .accent-title {
+.hero-container .accent-title {
   font-size: 48px;
   line-height: 1;
   letter-spacing: 0em;
@@ -68,7 +75,7 @@
   }
 }
 
-// -- POSITION BUTTON --
+// // -- POSITION BUTTON --
 
 .hero-buttons {
   display: flex;
@@ -82,11 +89,11 @@
   }
 }
 
-.hero .button:not(:last-child) {
+.hero-container .button:not(:last-child) {
   margin-right: 9px;
 }
 
-// -- ARTICLE --
+// // -- ARTICLE --
 
 .hero-article {
   display: none;
@@ -111,13 +118,13 @@
   }
 }
 
-.hero .text-article {
+.hero-container .text-article {
   margin-bottom: 7px;
 }
 
-// -- OUTLETS --
+// // -- OUTLETS --
 
-.hero .outlets-list {
+.hero-container .outlets-list {
   display: none;
 
   margin-left: auto;
@@ -125,40 +132,40 @@
   padding-right: 10px;
 
   font-weight: $add-fweight;
-  @media screen and (min-width: $tablet) {
-    display: block;
-  }
+  // @media screen and (min-width: $tablet) {
+  //   display: block;
+  // }
 }
 
-.hero .outlets-item {
-  position: relative;
-  display: block;
-}
+// .hero-container .outlets-item {
+//   position: relative;
+//   display: block;
+// }
 
-.hero .outlets-item:not(:last-child) {
-  margin-bottom: 14px;
-  @media screen and (min-width: $desktop) {
-    margin-bottom: 18px;
-  }
-}
+// .hero-container .outlets-item:not(:last-child) {
+//   margin-bottom: 14px;
+//   @media screen and (min-width: $desktop) {
+//     margin-bottom: 18px;
+//   }
+// }
 
-.hero .outlets-number {
-  position: relative;
-  transform-style: preserve-3d;
+// .hero-container .outlets-number {
+//   position: relative;
+//   transform-style: preserve-3d;
 
-  font-family: $add-ffamily;
-  font-size: 28px;
+//   font-family: $add-ffamily;
+//   font-size: 28px;
 
-  line-height: 1.14;
-  letter-spacing: 0.04em;
-  color: $primary-title-color;
-  @media screen and (min-width: $desktop) {
-    font-size: 46px;
-    line-height: 1.13;
-  }
-}
+//   line-height: 1.14;
+//   letter-spacing: 0.04em;
+//   color: $primary-title-color;
+//   @media screen and (min-width: $desktop) {
+//     font-size: 46px;
+//     line-height: 1.13;
+//   }
+// }
 
-.hero .circle {
+.hero-container .circle {
   position: absolute;
   top: -4px;
   right: -9px;
@@ -177,7 +184,7 @@
   }
 }
 
-.hero .outlets-type {
+.hero-container .outlets-type {
   display: block;
   font-size: 8px;
 
@@ -190,14 +197,14 @@
   }
 }
 
-// -- IMAGE --
+// // -- IMAGE --
 
-.hero .ice-cream-img {
+.header .ice-cream-img {
   position: absolute;
   transform-style: preserve-3d;
 
   bottom: 0;
-  right: 32px;
+  left: 117px;
   display: block;
   background-image: url(../images/Mobile/big-iceCream.png);
   background-repeat: no-repeat;
@@ -223,7 +230,8 @@
   @media screen and (min-width: $tablet) {
     width: 143px;
     height: 336px;
-    right: 213px;
+    left: 400px;
+
     background-image: url(../images/Desktop/big-iceCream.png);
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
@@ -234,11 +242,11 @@
   @media screen and (min-width: $desktop) {
     width: 236px;
     height: 557px;
-    right: 341px;
+    left: 594px;
   }
 }
 
-.hero .ice-cream-img::before {
+.header .ice-cream-img::before {
   content: '';
   position: absolute;
   transform: translateZ(-1px);
@@ -264,10 +272,11 @@
   }
 }
 
-.hero .bio-img {
+.header .bio-img {
   display: none;
 
   position: absolute;
+  z-index: 1;
   bottom: 28px;
   left: 19px;
   width: 124px;
@@ -301,17 +310,17 @@
   @media screen and (min-width: $desktop) {
     width: 188px;
     height: 191px;
-    left: -38px;
+    left: 77px;
     bottom: 45px;
   }
 }
 
-.hero .tasty-img {
+.header-container .tasty-img {
   display: none;
 
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: 34px;
   width: 168px;
   height: 133px;
 
@@ -343,6 +352,6 @@
   @media screen and (min-width: $desktop) {
     width: 293px;
     height: 232px;
-    right: 0;
+    right: 0px;
   }
 }
