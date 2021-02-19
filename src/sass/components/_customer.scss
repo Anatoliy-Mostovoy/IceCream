@@ -158,13 +158,13 @@
 // .slick-slider.slick-dotted {
 // }
 /* Ограничивающая оболочка */
-// .slick-list {
-//   overflow: hidden;
-// }
+.slick-list {
+  overflow: hidden;
+}
 /* Лента слайдов */
-// .slick-track {
-//   display: flex;
-// }
+.slick-track {
+  display: flex;
+}
 /* Слайд */
 // .slick-slide {
 // }
@@ -187,14 +187,19 @@
   align-items: center;
   justify-content: center;
 }
+
 .slick-dots li {
   list-style: none;
   margin: 0px 18px;
 }
 
 /* Активная точка */
-// .slick-dots li.slick-active button {
-// }
+.slick-dots li.slick-active button {
+  background-image: url('/images/home.svg');
+  background-position: center;
+  background-color: transparent;
+  border-radius: 0%;
+}
 
 /* Элемент точки */
 .slick-dots button {
