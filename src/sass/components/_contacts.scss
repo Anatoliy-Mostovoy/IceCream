@@ -1,7 +1,11 @@
 .contacts {
   background-color: $background-color;
 
-  background-image: linear-gradient(to bottom, #ffffff, $background-color 25%);
+  background-image: linear-gradient(
+    to bottom,
+    #ffffff 25%,
+    $background-color 25%
+  );
 
   /*@media screen and (min-width: $desktop) {
     background-size: cover;
