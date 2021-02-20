@@ -196,6 +196,7 @@
 .header .ice-cream-img {
   position: absolute;
   transform-style: preserve-3d;
+  opacity: 1;
 
   bottom: 0;
   left: 117px;
@@ -268,6 +269,7 @@
 
 .header .bio-img {
   display: none;
+  transform: scale(1) translate(0px, 0px);
 
   position: absolute;
   z-index: 1;
@@ -311,6 +313,8 @@
 
 .header .tasty-img {
   display: none;
+  transform: rotate(0deg) translateY(0%);
+  transform-origin: bottom left;
 
   position: absolute;
   bottom: 0;
@@ -347,5 +351,143 @@
     width: 293px;
     height: 232px;
     right: 90px;
+  }
+}
+
+.header .tasty-img {
+  animation-name: transform;
+  animation-duration: 800ms;
+  animation-fill-mode: backwards;
+  animation-delay: 2500ms;
+}
+
+@keyframes transform {
+  0% {
+    transform: rotate(45deg) translateY(100%);
+  }
+  100% {
+    transform: rotate(0deg) translateY(0%);
+  }
+}
+
+.header .bio-img {
+  animation-name: shake;
+  opacity: 1;
+  animation-duration: 1000ms;
+  animation-fill-mode: backwards;
+  animation-delay: 1000ms;
+}
+
+@keyframes shake {
+  0% {
+    opacity: 0;
+    transform: scale(1) translate(0px, 0px);
+  }
+  1% {
+    opacity: 0.2;
+    transform: scale(1) translate(-1px, -1px);
+  }
+  5% {
+    opacity: 0.5;
+    transform: scale(0.95) translate(-3px, -3px);
+  }
+  10% {
+    opacity: 0.7;
+    transform: scale(0.9) translate(-6px, -6px);
+  }
+  15% {
+    opacity: 0.9;
+    transform: scale(0.95) translate(-6px, -3px);
+  }
+  20% {
+    opacity: 1;
+    transform: scale(1) translate(-9px, 0px);
+  }
+  25% {
+    transform: scale(1.05) translate(-6px, 3px);
+  }
+  30% {
+    transform: scale(1.1) translate(-3px, 7px);
+  }
+  35% {
+    transform: scale(1.15) translate(0px, 15px);
+  }
+  40% {
+    transform: scale(1.1) translate(3px, 7px);
+  }
+  45% {
+    transform: scale(1.05) translate(7.5px, 3px);
+  }
+  50% {
+    transform: scale(1) translate(15px, 0px);
+  }
+  55% {
+    transform: scale(0.95) translate(7px, -3px);
+  }
+  60% {
+    transform: scale(0.9) translate(3px, -7px);
+  }
+  65% {
+    transform: scale(0.85) translate(0px, -10px);
+  }
+  70% {
+    transform: scale(0.9) translate(-5px, -7.5px);
+  }
+  75% {
+    transform: scale(0.95) translate(-7px -3px);
+  }
+  80% {
+    transform: scale(1) translate(-7.5px 0px);
+  }
+  85% {
+    transform: scale(1.05) translate(0px, -6px);
+  }
+  90% {
+    transform: scale(1) translate(5px, 0px);
+  }
+  95% {
+    transform: scale(0.95) translate(2px, -2px);
+  }
+  100% {
+    transform: scale(1) translate(0px, 0px);
+  }
+}
+
+.header .ice-cream-img {
+  animation-name: show;
+  animation-duration: 1000ms;
+  animation-fill-mode: backwards;
+  animation-delay: 2500ms;
+}
+
+@keyframes show {
+  0% {
+    transform: rotate(45deg) translateY(100%);
+  }
+  100% {
+    transform: rotate(0deg) translateY(0%);
+  }
+}
+
+.header .ice-cream-img {
+  opacity: 1;
+  animation-name: rotateX;
+  animation-duration: 1000ms;
+  animation-fill-mode: backwards;
+  animation-delay: 500ms;
+}
+@keyframes rotateX {
+  0% {
+    transform: perspective(400px) rotateY(90deg);
+  }
+  25% {
+    transform: perspective(400px) rotateY(85deg);
+  }
+  50% {
+    transform: perspective(400px) rotateY(45deg);
+  }
+
+  100% {
+    transform: perspective(400px) rotateY(0deg);
   }
 }
