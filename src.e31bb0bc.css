@@ -623,6 +623,8 @@ img {
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
+    padding-left: 34px;
+    padding-right: 34px;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -674,7 +676,7 @@ img {
 
 .hero-container .text-title {
   font-size: 26px;
-  line-height: 1.15;
+  line-height: 1.13;
   letter-spacing: 0.04em;
   color: #ffffff;
 }
@@ -743,7 +745,7 @@ img {
 }
 @media screen and (min-width: 1280px) {
   .hero-article {
-    margin-left: 165px;
+    margin-left: 180px;
     max-width: 200px;
     font-size: 14px;
   }
@@ -884,7 +886,7 @@ img {
   .header .ice-cream-img {
     width: 236px;
     height: 557px;
-    left: 594px;
+    left: 549px;
   }
 }
 
@@ -997,7 +999,7 @@ img {
   .header .tasty-img {
     width: 293px;
     height: 232px;
-    right: 115px;
+    right: 90px;
   }
 }
 
@@ -1006,7 +1008,7 @@ img {
   margin-bottom: 86px;
   width: 280px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   .rev-slider {
     width: 620px;
     margin-bottom: 119px;
@@ -1043,7 +1045,7 @@ img {
 }
 @media screen and (min-width: 768px) {
   .text-bg {
-    padding: 30px 36px 28px 40px;
+    padding: 30px 40px 28px 40px;
     margin-bottom: 42px;
   }
 }
@@ -1059,8 +1061,7 @@ img {
   line-height: 2.55;
   text-align: center;
   letter-spacing: 0.04em;
-  background-image: repeating-linear-gradient(to bottom, transparent, transparent 99%, #e1e1e1 1%, #e1e1e1);
-  background-size: 100%;
+  background-image: repeating-linear-gradient(to bottom, transparent, transparent 28px, #e1e1e1 28px, #e1e1e1 29px);
 }
 @media screen and (min-width: 768px) {
   .text {
@@ -1078,8 +1079,9 @@ img {
 .text::before {
   content: "";
   position: absolute;
-  top: 47px;
-  left: 89px;
+  top: 10%;
+  left: 15%;
+  transform: translate(-15%, -10%);
   width: 54px;
   height: 40px;
   background-image: url("/quotes.4d7be276.svg");
@@ -1088,20 +1090,22 @@ img {
 }
 @media screen and (min-width: 768px) {
   .text::before {
-    top: 15px;
-    left: 5px;
+    top: 10%;
+    left: 1%;
+    transform: translate(-1%, -10%);
   }
 }
 @media screen and (min-width: 1280px) {
   .text::before {
-    top: 35px;
-    left: 40px;
+    top: 30%;
+    left: 5%;
+    transform: translate(-5%, -30%);
   }
 }
 
 .name {
   position: relative;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
   font-size: 14px;
   line-height: 1.86;
   text-align: center;
@@ -1109,6 +1113,7 @@ img {
 @media screen and (min-width: 768px) {
   .name {
     font-size: 16px;
+    margin-bottom: 35px;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -1120,13 +1125,22 @@ img {
 .name::before {
   content: "";
   position: absolute;
-  width: 12px;
+  width: 32px;
   height: 4px;
+  top: -65%;
+  left: 50%;
+  transform: translate(-50%, 65%);
   background-image: url("/dots.ec1fa6a0.svg");
-  background-position: 45px 45px;
+  background-position: center;
   background-size: contain;
-  background-repeat: repeat;
-  order: 3;
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 768px) {
+  .name::before {
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+  }
 }
 
 /* Слайдер */
@@ -1194,6 +1208,7 @@ img {
 }
 
 .footer {
+  position: relative;
   padding-top: 113px;
   padding-bottom: 25px;
   background-color: #fff5f6;
@@ -1209,6 +1224,21 @@ img {
   .footer {
     padding-top: 165px;
     padding-bottom: 10px;
+  }
+}
+
+.footer-line::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #e1e1e1;
+  bottom: 73px;
+}
+@media screen and (min-width: 1280px) {
+  .footer-line::after {
+    bottom: 45px;
   }
 }
 
@@ -1395,7 +1425,6 @@ img {
   font-size: 14px;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  text-align: center;
   color: #ffffff;
 }
 @media screen and (min-width: 768px) {
@@ -1408,8 +1437,8 @@ img {
 }
 @media screen and (min-width: 1280px) {
   .products-text {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 44px;
+    padding-right: 44px;
     margin-bottom: 62px;
     font-size: 16px;
   }
@@ -1434,7 +1463,7 @@ img {
     background-image: url("/points-group-td.8db7d557.svg");
   }
 }
-@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-width: 768px) and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-width: 768px) and (min-resolution: 2dppx) and (min-width: 768px) {
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2) and (min-width: 768px) and (max-width: 1279px), screen and (min-width: 768px) and (min-resolution: 192dpi) and (min-width: 768px) and (max-width: 1279px), screen and (min-width: 768px) and (min-resolution: 2dppx) and (min-width: 768px) and (max-width: 1279px) {
   .products-text::before {
     background-image: url("/points-group-td@2x.5fdee5e4.svg");
     background-size: cover;
@@ -1511,17 +1540,101 @@ img {
   }
   .list-products .card-products {
     margin: 10px;
-    width: calc((100% - 3 * 20) / 3);
+    width: calc((100% - 3 * 20px) / 3);
+  }
+
+  .card-products {
+    padding-top: 152px;
+    padding-bottom: 40px;
+  }
+  .card-products::before {
+    top: -104px;
+    height: 226px;
+    width: 220px;
+  }
+  .card-products:first-child::before {
+    background-image: url("/ice-cream.67b6dffb.png");
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .card-products:first-child::before {
+    background-image: url("/ice-cream@2x.d1803cb1.png");
+    background-size: cover;
+  }
+}
+@media screen and (min-width: 768px) {
+  .card-products:nth-child(2)::before {
+    height: 233px;
+    background-image: url("/ice-coffee.89e7fa23.png");
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .card-products:nth-child(2)::before {
+    background-image: url("/ice-coffee@2x.f6b1edea.png");
+    background-size: cover;
+  }
+}
+@media screen and (min-width: 768px) {
+  .card-products:last-child::before {
+    background-image: url("/milkshake.cded60dd.png");
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .card-products:last-child::before {
+    background-image: url("/milkshake@2x.c83daa15.png");
+    background-size: cover;
   }
 }
 @media screen and (min-width: 1280px) {
   .list-products {
     display: flex;
-    margin: -12px;
+    margin: -15px;
   }
   .list-products .card-products {
-    margin: 12px;
-    width: calc((100% - 3 * 24) / 3);
+    margin: 15px;
+    width: calc((100% - 3 * 30px) / 3);
+  }
+
+  .card-products {
+    padding-top: 163px;
+    padding-bottom: 50px;
+  }
+  .card-products::before {
+    top: -210px;
+    height: 335px;
+    width: 335px;
+  }
+  .card-products:first-child::before {
+    background-image: url("/ice-cream.6b77fb62.png");
+  }
+}
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
+  .card-products:first-child::before {
+    background-image: url("/ice-cream@2x.b4c0d9cd.png");
+    background-size: cover;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .card-products:nth-child(2)::before {
+    height: 337px;
+    background-image: url("/ice-coffee.87ae190c.png");
+  }
+}
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
+  .card-products:nth-child(2)::before {
+    background-image: url("/ice-coffee@2x.41e1f8fa.png");
+    background-size: cover;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .card-products:last-child::before {
+    background-image: url("/milkshakes.bfc7897d.png");
+  }
+}
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
+  .card-products:last-child::before {
+    background-image: url("/milkshakes@2x.1d074a88.png");
+    background-size: cover;
   }
 }
 .header {
@@ -1588,6 +1701,10 @@ img {
   overflow: hidden;
 }
 .logo-circle .logo-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -35%);
   fill: #ffffff;
 }
 
@@ -1658,8 +1775,8 @@ img {
   height: 40px;
   border: 0;
   border-radius: 50%;
+  fill: #d41443;
   background-color: #ffffff;
-  color: #d41443;
 }
 .btn-icon {
   fill: currentColor;
@@ -1670,6 +1787,7 @@ img {
 .header .btn {
   width: 18px;
   height: 18px;
+  color: #d41443;
 }
 @media screen and (min-width: 1280px) {
   .header .btn {
@@ -1680,6 +1798,7 @@ img {
 .header .btn-icon {
   width: 10px;
   height: 10px;
+  fill: currentColor;
 }
 @media screen and (min-width: 1280px) {
   .header .btn-icon {
@@ -1708,8 +1827,8 @@ img {
 
 .button-icon {
   margin-left: 13px;
-  width: 5px;
-  height: 8px;
+  width: 8px;
+  height: 10px;
   fill: currentColor;
 }
 
@@ -1770,9 +1889,13 @@ img {
   }
 }
 
+.header .button {
+  z-index: 2;
+}
+
 .contacts {
   background-color: #fff5f6;
-  background-image: linear-gradient(to bottom, #ffffff, #fff5f6 25%);
+  background-image: linear-gradient(to bottom, #ffffff 25%, #fff5f6 25%);
   /*@media screen and (min-width: $desktop) {
     background-size: cover;
     background-position: center;
@@ -1986,6 +2109,39 @@ img {
 
 .advantages-item {
   margin: 0 15px;
+  display: block;
+}
+
+.advantages-item::before {
+  display: inline-block;
+  content: "";
+  width: 50px;
+  height: 50px;
+  margin-bottom: 16px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 768px) {
+  .advantages-item::before {
+    margin-bottom: 36px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .advantages-item::before {
+    margin-bottom: 40px;
+  }
+}
+
+.icon-milk::before {
+  background-image: url(/icon-milk.98a5ddbd.png);
+}
+
+.icon-apple::before {
+  background-image: url(/icon-apple.ea2b328c.png);
+}
+
+.icon-ice-cream::before {
+  background-image: url(/icon-ice-cream.624afcb6.png);
 }
 
 .advantages-number {
