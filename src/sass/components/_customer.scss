@@ -37,7 +37,7 @@
   background: $slider-background-color;
 
   @media screen and (min-width: $tablet) {
-    padding: 30px 36px 28px 40px;
+    padding: 30px 40px 28px 40px;
     margin-bottom: 42px;
   }
 
@@ -53,16 +53,9 @@
   text-align: center;
   letter-spacing: 0.04em;
 
-  // background-image: repeating-linear-gradient(
-  //   to bottom,
-  //   transparent,
-  //   transparent 28px,
-  //   #e1e1e1 28px,
-  //   #e1e1e1 29px
-  // );
-
   background-image: repeating-linear-gradient(
-    to bottom 
+    to bottom,
+    transparent,
     transparent 28px,
     #e1e1e1 28px,
     #e1e1e1 29px
@@ -86,8 +79,9 @@
 .text::before {
   content: '';
   position: absolute;
-  top: 47px;
-  left: 89px;
+  top: 10%;
+  left: 15%;
+  transform: translate(-15%, -10%);
   width: 54px;
   height: 40px;
   background-image: url('/images/quotes.svg');
@@ -95,13 +89,15 @@
   background-position: center;
 
   @media screen and (min-width: $tablet) {
-    top: 15px;
-    left: 5px;
+    top: 10%;
+    left: 1%;
+    transform: translate(-1%, -10%);
   }
 
   @media screen and (min-width: $desktop) {
-    top: 35px;
-    left: 40px;
+    top: 30%;
+    left: 5%;
+    transform: translate(-5%, -30%);
   }
 }
 
@@ -126,14 +122,16 @@
 .name::before {
   content: '';
   position: absolute;
-  width: 12px;
+  width: 32px;
   height: 4px;
+  top: -50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
 
   background-image: url('/images/dots.svg');
-  background-position: 45px 45px;
+  background-position: center;
   background-size: contain;
-  background-repeat: repeat;
-  order: 3;
+  background-repeat: no-repeat;
 }
 
 /* Слайдер */
