@@ -19,8 +19,16 @@
     right: 28px;
     border: none;
     background: transparent;
+    transition-property: background-color, transform;
+    transition-duration: 500ms;
+    transition-timing-function: linear;
+    transition-delay: 0;
     &-icon {
       fill: $white-text-color;
+    }
+    &:focus,
+    &:focus {
+      transform: scale(1.15);
     }
   }
 
