@@ -46,7 +46,7 @@
     padding-right: 11px;
     margin-bottom: 40px;
 
-    line-height: 1.7;
+    line-height: 1.78;
   }
 
   @media screen and (min-width: $desktop) {
@@ -164,6 +164,10 @@
 }
 
 @media screen and (min-width: $tablet) {
+  .text-hidden {
+    display: none;
+  }
+
   .list-products {
     display: flex;
     margin: -10px;
