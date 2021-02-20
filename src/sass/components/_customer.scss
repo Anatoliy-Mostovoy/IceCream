@@ -3,7 +3,7 @@
   margin-bottom: 86px;
   width: 280px;
 
-  @media screen and (max-width: $tablet) {
+  @media screen and (min-width: $tablet) {
     width: 620px;
     margin-bottom: 119px;
   }
@@ -53,14 +53,22 @@
   text-align: center;
   letter-spacing: 0.04em;
 
+  // background-image: repeating-linear-gradient(
+  //   to bottom,
+  //   transparent,
+  //   transparent 28px,
+  //   #e1e1e1 28px,
+  //   #e1e1e1 29px
+  // );
+
   background-image: repeating-linear-gradient(
-    to bottom,
-    transparent,
-    transparent 99%,
-    #e1e1e1 1%,
-    #e1e1e1
+    to bottom 
+    transparent 28px,
+    #e1e1e1 28px,
+    #e1e1e1 29px
   );
-  background-size: 100%;
+
+  // background-size: 100%, 28px;
 
   @media screen and (min-width: $tablet) {
     font-size: $main-fsize-tablet;
