@@ -7,7 +7,6 @@
 }
 
 .header .container {
-  border: 1px solid tomato;
   padding: 6px 20px 160px;
 
   @media screen and (min-width: $tablet) {
@@ -67,31 +66,35 @@
 }
 
 // NAV
-.nav {
+
+.navigation {
   display: none;
   z-index: 10;
   @media screen and (min-width: $desktop) {
     display: inline-flex;
+  }
+}
+.nav {
+  display: inline-flex;
 
-    &-item {
-      display: block;
+  &-item {
+    display: block;
 
-      height: 100%;
+    height: 100%;
 
-      font-size: 16px;
-      line-height: 1.3;
-      color: $white-text-color;
-    }
-    &-item:not(:last-child) {
-      margin-right: 35px;
-    }
-    .active {
-      color: $primary-title-color;
-    }
-    &-item:hover,
-    &-item:focus {
-      color: $primary-title-color;
-    }
+    font-size: 16px;
+    line-height: 1.3;
+    color: $white-text-color;
+  }
+  &-item:not(:last-child) {
+    margin-right: 35px;
+  }
+  .active {
+    color: $primary-title-color;
+  }
+  &-item:hover,
+  &-item:focus {
+    color: $primary-title-color;
   }
 }
 
