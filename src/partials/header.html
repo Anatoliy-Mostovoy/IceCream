@@ -1,38 +1,40 @@
 <header class="header">
   <div class="container">
     <div class="header-container">
-      <div class="logo">
+      <a class="logo" href="./">
         <div class="logo-circle">
           <svg class="logo-icon" width="50" height="50">
             <use href="./images/symbol-defs.svg#icon-icecream" />
           </svg>
         </div>
         <span>icecream</span>
-      </div>
+      </a>
 
-      <ul class="breadcrumb">
-        <li class="breadcrumb-item active">
-          <a class="link" href="#about-us">Home</a>
-        </li>
-        <li class="breadcrumb-item">
-          <a class="link" href="#about-us">About us</a>
-        </li>
-        <li class="breadcrumb-item">
-          <a class="link" href="#how-made">How it’s made?</a>
-        </li>
-        <li class="breadcrumb-item">
-          <a class="link" href="#our-products">Our products</a>
-        </li>
-        <li class="breadcrumb-item">
-          <a class="link" href="#contact">Contact</a>
-        </li>
-      </ul>
-
-      <div class="menu-burger">
+      <nav class="navigation">
+        <ul class="nav">
+          <li class="nav-item active">
+            <a class="link" href="#about-us">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="link" href="#about-us">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="link" href="#how-made">How it’s made?</a>
+          </li>
+          <li class="nav-item">
+            <a class="link" href="#our-products">Our products</a>
+          </li>
+          <li class="nav-item">
+            <a class="link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <button class="menu-burger">
         <svg class="logo-menu-burger" width="20" height="12">
           <use href="./images/symbol-defs.svg#icon-burger" />
         </svg>
-      </div>
+      </button>
+
       <button type="button" class="button">
         Buy now
         <svg class="button-icon">
@@ -70,12 +72,10 @@
       </div>
       <ul class="outlets-list ul">
         <li class="outlets-item">
-          <span class="circle"></span>
           <span class="outlets-number">16</span>
           <span class="outlets-type">cafes</span>
         </li>
         <li class="outlets-item">
-          <span class="circle"></span>
           <span class="outlets-number">23</span>
           <span class="outlets-type">food trucks</span>
         </li>
