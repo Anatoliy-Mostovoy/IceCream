@@ -57,6 +57,10 @@
   border-radius: 50%;
   overflow: hidden;
   .logo-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -35%);
     fill: $white-text-color;
   }
 }

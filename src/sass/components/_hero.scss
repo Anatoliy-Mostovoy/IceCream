@@ -36,7 +36,7 @@
 
 .hero-container .text-title {
   font-size: 26px;
-  line-height: 1.15;
+  line-height: 1.13;
   letter-spacing: 0.04em;
 
   color: $white-text-color;
@@ -98,7 +98,7 @@
     max-width: 114px;
   }
   @media screen and (min-width: $desktop) {
-    margin-left: 165px;
+    margin-left: 180px;
     max-width: 200px;
 
     font-size: 14px;
@@ -236,7 +236,7 @@
   @media screen and (min-width: $desktop) {
     width: 236px;
     height: 557px;
-    left: 594px;
+    left: 549px;
   }
 }
 
@@ -346,6 +346,6 @@
   @media screen and (min-width: $desktop) {
     width: 293px;
     height: 232px;
-    right: 115px;
+    right: 90px;
   }
 }
