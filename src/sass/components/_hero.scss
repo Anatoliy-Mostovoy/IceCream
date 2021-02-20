@@ -7,7 +7,7 @@
     padding-top: 15px;
   }
   @media screen and (min-width: $desktop) {
-    padding: 84px 0 0 69px;
+    padding: 84px 0 0;
   }
 }
 
@@ -98,7 +98,7 @@
     max-width: 114px;
   }
   @media screen and (min-width: $desktop) {
-    margin-left: 180px;
+    margin-left: 160px;
     max-width: 200px;
 
     font-size: 14px;
@@ -114,6 +114,7 @@
 .hero-container .outlets-list {
   display: none;
   position: absolute;
+  transform-style: preserve-3d;
   top: 14px;
   right: 0;
 
@@ -144,9 +145,6 @@
 }
 
 .hero-container .outlets-number {
-  position: relative;
-  transform-style: preserve-3d;
-
   font-family: $add-ffamily;
   font-size: 28px;
 
@@ -159,10 +157,13 @@
   }
 }
 
-.hero-container .circle {
+.outlets-number::before {
+  content: '';
   position: absolute;
-  top: -4px;
-  right: -9px;
+  transform: translateZ(-1px);
+
+  top: -2px;
+  right: -10px;
   z-index: 0;
 
   display: block;
@@ -173,8 +174,8 @@
   @media screen and (min-width: $desktop) {
     width: 30px;
     height: 30px;
-    right: -15px;
-    top: -7px;
+    right: -18px;
+    top: -4px;
   }
 }
 
