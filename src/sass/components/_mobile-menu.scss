@@ -1,0 +1,35 @@
+.mobile-menu {
+  display: none;
+  @media screen and (max-width: $max-tablet) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 22;
+    display: block;
+    background: $mobile-menu-color;
+    min-height: 100vh;
+    max-width: $max-tablet;
+    padding: 60px 25px;
+  }
+  .button {
+    margin-bottom: 20px;
+  }
+}
+.mobile-nav {
+  &-item {
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+
+    color: $white-text-color;
+  }
+  .link {
+    display: block;
+    padding: 12px 0;
+  }
+}
