@@ -1,6 +1,5 @@
 .about {
   position: relative;
-  max-width: 480px;
   margin: 0 auto;
   padding-top: 125px;
   padding-bottom: 39px;
@@ -10,11 +9,6 @@
   @media screen and (min-width: 768px) and (max-width: 1279px) {
     padding-top: 130px;
     padding-bottom: 66px;
-    max-width: 768px;
-  }
-
-  @media screen and (min-width: $desktop) {
-    max-width: 1280px;
   }
 }
 
@@ -56,11 +50,6 @@
   }
 }
 
-.about-container {
-  position: relative;
-  background-color: transparent;
-}
-
 .section-label {
   text-align: center;
   margin-bottom: 26px;
@@ -83,7 +72,7 @@
 
 .description-thumb {
   width: 100%;
-
+  
   @media screen and (min-width: $tablet) {
     width: calc((100% - 17px) / 2);
     margin-top: -50px;
