@@ -103,7 +103,7 @@
 
 .name {
   position: relative;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 
   font-size: $main-fsize-tablet;
   line-height: 1.86;
@@ -112,6 +112,7 @@
 
   @media screen and (min-width: $tablet) {
     font-size: $main-fsize-desktop;
+    margin-bottom: 35px;
   }
 
   @media screen and (min-width: $desktop) {
@@ -124,14 +125,20 @@
   position: absolute;
   width: 32px;
   height: 4px;
-  top: -50%;
+  top: -65%;
   left: 50%;
-  transform: translate(-50%, 50%);
+  transform: translate(-50%, 65%);
 
   background-image: url('/images/dots.svg');
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+
+  @media screen and (min-width: $tablet) {
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+  }
 }
 
 /* Слайдер */
