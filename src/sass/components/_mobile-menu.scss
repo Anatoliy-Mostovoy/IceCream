@@ -5,13 +5,25 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 22;
+    z-index: 14;
     display: block;
     background: $mobile-menu-color;
     min-height: 100vh;
     max-width: $max-tablet;
     padding: 60px 25px;
   }
+
+  .cross {
+    position: absolute;
+    top: 23px;
+    right: 28px;
+    border: none;
+    background: transparent;
+    &-icon {
+      fill: $white-text-color;
+    }
+  }
+
   .button {
     margin-bottom: 20px;
   }
@@ -25,8 +37,15 @@
     line-height: 18px;
     display: flex;
     align-items: center;
-
+    border-top: 1px solid $mobile-menu-border;
     color: $white-text-color;
+  }
+  &-item:last-child {
+    border-bottom: 1px solid $mobile-menu-border;
+  }
+  &-item:hover,
+  &-item:focus {
+    color: $primary-title-color;
   }
   .link {
     display: block;
