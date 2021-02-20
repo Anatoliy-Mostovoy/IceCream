@@ -21,6 +21,14 @@
   display: block;
 }
 
+.advantages-item:not(:last-child) {
+  margin-bottom: 38px;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 0;
+  }
+}
+
 .advantages-item::before {
   display: inline-block;
   content: '';
