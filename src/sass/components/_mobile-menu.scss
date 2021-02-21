@@ -18,7 +18,7 @@
   }
 
   @media screen and (min-width: 480px) {
-    padding-top: 100px;
+    padding-top: 130px;
     text-align: center;
   }
 
@@ -41,6 +41,8 @@
       transform: scale(1.15);
     }
     @media screen and (min-width: 480px) {
+      top: 40px;
+      right: 40px;
       &-icon {
         width: 25px;
         height: 25px;
@@ -51,6 +53,13 @@
   .button {
     display: inline-block;
     margin-bottom: 20px;
+    @media screen and (min-width: 480px) {
+      width: 230px;
+      height: 60px;
+      border-radius: 30px;
+      font-size: 22px;
+      margin-bottom: 40px;
+    }
   }
 }
 .mobile-menu.is-hidden {
