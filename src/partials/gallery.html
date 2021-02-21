@@ -1,25 +1,37 @@
 <section class="gallery">
-    <div class="container">
-        <h2 class="title-hidden">gallery</h2>
-        <picture>
-            <source srcset="
-                                                  
-                                                  ./images/Mobile/gallery.jpg 1x,
-                                                  ./images/Mobile/gallery@2x.jpg 2x"
-                                                 media="(max-width: $max-mobile)" type="image/jpg" />
-            <source srcset="
-                                                  
-                                                  ./images/Tablet/gallery.jpg 1x,
-                                                  ./images/Tablet/gallery@2x.jpg 2x"
-                                                 media="(min-width: $mobile) and (max-width: $max-tablet)" />
-                
-            <source srcset="
-                                                  
-                                                  ./images/Desktop/gallery.jpg 1x,
-                                                  ./images/Desktop/gallery@2x.jpg 2x"
-                                                 media="(min-width: $desktop)" />
-            <img class="gallery-image" src="./images/Desktop/gallery.jpg" alt="our works" width="1280" height="430" />
-        </picture>
-    </div>
-</section>
+  <div class="container">
+    <h2 class="title-hidden">gallery</h2>
+    <picture>
+      <source
+        media="(max-width: 480)"
+        srcset="
+          ./images/Mobile/gallery.jpg    1x,
+          ./images/Mobile/gallery@2x.jpg 2x
+        "
+        type="image/jpg"
+      />
+      <source
+        media="(min-width: 480) and (max-width: 1279)"
+        srcset="
+          ./images/Tablet/gallery.jpg    1x,
+          ./images/Tablet/gallery@2x.jpg 2x
+        "
+      />
 
+      <source
+        media="(min-width: 1280)"
+        srcset="
+          ./images/Desktop/gallery.jpg    1x,
+          ./images/Desktop/gallery@2x.jpg 2x
+        "
+      />
+      <img
+        class="gallery-image"
+        src="./images/Desktop/gallery.jpg"
+        alt="our works"
+        width="1280"
+        height="430"
+      />
+    </picture>
+  </div>
+</section>
