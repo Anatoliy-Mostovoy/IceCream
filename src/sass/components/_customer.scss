@@ -3,10 +3,14 @@
   margin-bottom: 86px;
 
   @media screen and (min-width: $tablet) {
+    padding-left: 30px;
+    padding-right: 30px;
     margin-bottom: 119px;
   }
 
   @media screen and (min-width: $desktop) {
+    padding-left: 52px;
+    padding-right: 52px;
     margin-bottom: 132px;
   }
 }
