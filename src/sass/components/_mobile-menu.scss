@@ -12,6 +12,9 @@
     min-height: 100vh;
     max-width: $max-tablet;
     padding: 60px 25px;
+    transform: scale(1);
+    transition-duration: 250ms;
+    transition-timing-function: linear;
   }
 
   .cross {
