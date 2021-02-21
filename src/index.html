@@ -24,14 +24,11 @@
     <!-- Переключатель мобильного меню -->
     <script src="./mobile-menu.js"></script>
     <!-- Подключаем jQuery -->
-    <script
-      type="text/javascript"
-      src="//code.jquery.com/jquery-1.11.0.min.js"
-    ></script>
-    <script
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script
       type="text/javascript"
       src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
-    ></script>
+    ></script> -->
 
     <!-- Подключаем слайдер Slick -->
     <script type="text/javascript" src="./slick/js/slick.min.js"></script>
@@ -47,17 +44,15 @@
         $('.rev-slider').slick({
           draggable: true,
           autoplay: true,
-          autoplaySpeed: 5000,
+          autoplaySpeed: 2000,
           arrows: false,
           dots: true,
           fade: true,
-          speed: 500,
+          speed: 700,
           infinite: true,
-          cssEase: 'ease-in-out',
+          cssEase: 'linear',
           touchThreshold: 100,
           adaptiveHeight: true,
-          centerMode: true,
-          // variableWidth: true,
         });
       });
     </script>
