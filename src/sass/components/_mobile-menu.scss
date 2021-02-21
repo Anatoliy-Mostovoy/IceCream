@@ -1,12 +1,13 @@
 .mobile-menu {
   display: none;
   @media screen and (max-width: $max-tablet) {
+    display: block;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 14;
-    display: block;
+    opacity: 1;
     background: $mobile-menu-color;
     min-height: 100vh;
     max-width: $max-tablet;
@@ -36,6 +37,12 @@
     margin-bottom: 20px;
   }
 }
+.mobile-menu.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .mobile-nav {
   &-item {
     font-family: DM Sans;
