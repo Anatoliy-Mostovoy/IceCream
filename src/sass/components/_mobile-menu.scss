@@ -17,6 +17,11 @@
     transition-timing-function: linear;
   }
 
+  @media screen and (min-width: 480px) {
+    padding-top: 100px;
+    text-align: center;
+  }
+
   .cross {
     position: absolute;
     top: 23px;
@@ -27,6 +32,7 @@
     transition-duration: 500ms;
     transition-timing-function: linear;
     transition-delay: 0;
+    cursor: pointer;
     &-icon {
       fill: $white-text-color;
     }
@@ -34,9 +40,16 @@
     &:focus {
       transform: scale(1.15);
     }
+    @media screen and (min-width: 480px) {
+      &-icon {
+        width: 25px;
+        height: 25px;
+      }
+    }
   }
 
   .button {
+    display: inline-block;
     margin-bottom: 20px;
   }
 }
@@ -53,10 +66,13 @@
     font-weight: bold;
     font-size: 14px;
     line-height: 18px;
-    display: flex;
-    align-items: center;
+    display: block;
+
     border-top: 1px solid $mobile-menu-border;
     color: $white-text-color;
+    @media screen and (min-width: 480px) {
+      font-size: 22px;
+    }
   }
   &-item:last-child {
     border-bottom: 1px solid $mobile-menu-border;
@@ -68,5 +84,8 @@
   .link {
     display: block;
     padding: 12px 0;
+    @media screen and (min-width: 480px) {
+      padding: 30px 0;
+    }
   }
 }
