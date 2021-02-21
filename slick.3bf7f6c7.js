@@ -117,20 +117,22 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"mobile-menu.js":[function(require,module,exports) {
-(function () {
-  var refs = {
-    openModalBtn: document.querySelector('[data-modal-open]'),
-    closeModalBtn: document.querySelector('[data-modal-close]'),
-    modal: document.querySelector('[data-modal]')
-  };
-  refs.openModalBtn.addEventListener('click', toggleModal);
-  refs.closeModalBtn.addEventListener('click', toggleModal);
-
-  function toggleModal() {
-    refs.modal.classList.toggle('is-hidden');
-  }
-})();
+})({"js/slick.js":[function(require,module,exports) {
+$(document).ready(function () {
+  $('.rev-slider').slick({
+    draggable: true,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    arrows: false,
+    dots: true,
+    fade: true,
+    speed: 700,
+    infinite: true,
+    cssEase: 'linear',
+    touchThreshold: 100,
+    adaptiveHeight: true
+  });
+});
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -335,5 +337,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","mobile-menu.js"], null)
-//# sourceMappingURL=/mobile-menu.9f64c595.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/slick.js"], null)
+//# sourceMappingURL=/slick.3bf7f6c7.js.map
