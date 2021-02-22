@@ -3,6 +3,10 @@ body {
   font-style: normal;
   color: $text-color;
 
+  &.modal-open {
+    overflow: hidden;
+  }
+
   @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
     font-size: $main-fsize-tablet;
   }
