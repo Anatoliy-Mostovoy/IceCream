@@ -4832,6 +4832,12 @@ Copyright (c) 2013 Daniel Eden
     transition-timing-function: linear;
   }
 }
+@media screen and (min-width: 480px) {
+  .mobile-menu {
+    padding-top: 130px;
+    text-align: center;
+  }
+}
 .mobile-menu .cross {
   position: absolute;
   top: 23px;
@@ -4842,6 +4848,7 @@ Copyright (c) 2013 Daniel Eden
   transition-duration: 500ms;
   transition-timing-function: linear;
   transition-delay: 0;
+  cursor: pointer;
 }
 .mobile-menu .cross-icon {
   fill: #ffffff;
@@ -4849,8 +4856,28 @@ Copyright (c) 2013 Daniel Eden
 .mobile-menu .cross:focus, .mobile-menu .cross:focus {
   transform: scale(1.15);
 }
+@media screen and (min-width: 480px) {
+  .mobile-menu .cross {
+    top: 40px;
+    right: 40px;
+  }
+  .mobile-menu .cross-icon {
+    width: 25px;
+    height: 25px;
+  }
+}
 .mobile-menu .button {
+  display: inline-block;
   margin-bottom: 20px;
+}
+@media screen and (min-width: 480px) {
+  .mobile-menu .button {
+    width: 230px;
+    height: 60px;
+    border-radius: 30px;
+    font-size: 22px;
+    margin-bottom: 40px;
+  }
 }
 
 .mobile-menu.is-hidden {
@@ -4865,10 +4892,14 @@ Copyright (c) 2013 Daniel Eden
   font-weight: bold;
   font-size: 14px;
   line-height: 18px;
-  display: flex;
-  align-items: center;
+  display: block;
   border-top: 1px solid #e18298;
   color: #ffffff;
+}
+@media screen and (min-width: 480px) {
+  .mobile-nav-item {
+    font-size: 22px;
+  }
 }
 .mobile-nav-item:last-child {
   border-bottom: 1px solid #e18298;
@@ -4879,6 +4910,11 @@ Copyright (c) 2013 Daniel Eden
 .mobile-nav .link {
   display: block;
   padding: 12px 0;
+}
+@media screen and (min-width: 480px) {
+  .mobile-nav .link {
+    padding: 30px 0;
+  }
 }
 
 .btn {
@@ -4950,7 +4986,7 @@ Copyright (c) 2013 Daniel Eden
 }
 .button-revers:hover, .button-revers:focus {
   color: #ffffff;
-  background-color: #d41443;
+  background-color: #c7133e;
 }
 
 @media screen and (max-width: 768px) {
@@ -5003,10 +5039,6 @@ Copyright (c) 2013 Daniel Eden
 
 .header .button {
   z-index: 2;
-}
-
-.header .button-revers:hover, .header .button-revers:focus {
-  background-color: #c7133e;
 }
 
 .contacts {
