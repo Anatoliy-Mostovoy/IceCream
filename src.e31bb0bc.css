@@ -5041,6 +5041,11 @@ Copyright (c) 2013 Daniel Eden
   z-index: 2;
 }
 
+/*.header*/
+.button-revers:hover, .button-revers:focus {
+  background-color: #c7133e;
+}
+
 .contacts {
   position: relative;
   background-color: #fff5f6;
@@ -5242,11 +5247,6 @@ Copyright (c) 2013 Daniel Eden
 .contacts .contacts-icon {
   width: 8px;
   height: 10px;
-}
-.contacts .location-button {
-  background-color: #d41443;
-  color: #ffffff;
-  fill: #ffffff;
 }
 .contacts .button {
   margin-bottom: 10px;
