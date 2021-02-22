@@ -132,3 +132,11 @@
 .header .button {
   z-index: 2;
 }
+
+/*.header*/
+.button-revers {
+  &:hover,
+  &:focus {
+    background-color: $header-button-revers;
+  }
+}
