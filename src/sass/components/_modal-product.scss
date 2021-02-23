@@ -60,18 +60,25 @@
   }
 }
 
-.modal-button {
-  position: absolute;
-  top: 15px;
-  right: 15px;
+// .modal-button {
+//   position: absolute;
+//   top: 15px;
+//   right: 15px;
 
-  width: 30px;
-  height: 30px;
+//   width: 30px;
+//   height: 30px;
+//   cursor: pointer;
 
-  border: none;
-  background-color: $header-button-revers;
-  border-radius: 50%;
-}
+//   border: none;
+//   background-color: $primary-title-color;
+//   border-radius: 50%;
+//   outline: none;
+
+//   &:hover,
+//   &:focus {
+//     background-color: $header-button-revers;
+//   }
+// }
 
 .product-description {
   padding-top: 20px;
