@@ -1,0 +1,142 @@
+.form-backdrop {
+  position: fixed;
+  z-index: 1010;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../images/Desktop/fruit.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: grayscale(50%);
+  padding: 40px;
+  @media screen and (min-width: $desktop) {
+    padding: 60px;
+  }
+}
+
+.form-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+
+  background-color: $white-text-color;
+
+  opacity: 1;
+  scale: 1;
+  @include transition(scale, opacity);
+  padding: 40px 15px 15px;
+  border-bottom-right-radius: 55px;
+  border-top-left-radius: 55px;
+  @media screen and (min-width: $desktop) {
+    width: 400px;
+    padding: 40px 30px 30px;
+  }
+}
+
+.form-modal .button-revers {
+  border-radius: 0;
+  border-bottom-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+.form-backdrop.is-hidden .form-modal {
+  opacity: 0;
+  scale: 0.7;
+}
+
+.form-backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+//  form
+
+.form-title {
+  margin-bottom: 10px;
+  color: $header-button-revers;
+  font-family: $add-ffamily;
+  font-size: 16px;
+  text-align: center;
+  @media screen and (min-width: $desktop) {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.form-input {
+  box-sizing: border-box;
+  width: 100%;
+
+  border: 1px solid $secondary-text-color;
+  outline: 1px solid transparent;
+  padding: 5px 15px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  border-bottom-right-radius: 15px;
+  border-top-left-radius: 15px;
+  @media screen and (min-width: $desktop) {
+    padding: 7px 20px;
+    margin-bottom: 15px;
+  }
+}
+
+.buy-textarea {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding: 5px 15px;
+  border-bottom-right-radius: 15px;
+  border-top-left-radius: 15px;
+  border: 1px solid $secondary-text-color;
+  outline: 1px solid transparent;
+  outline: 1px solid transparent;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.form-text {
+  color: $header-button-revers;
+}
+
+.form-backdrop .button-revers {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: $header-button-revers;
+  outline: $header-button-revers;
+}
+
+.form-input:focus-within ~ .form-text,
+.form-input:not(:placeholder-shown) ~ .form-text {
+  color: $header-button-revers;
+}
+
+.form-modal:hover ~ .form-backdrop,
+.form-modal:focus ~ .form-backdrop {
+  filter: grayscale(0%);
+}
+
+.form-backdrop:focus,
+.form-backdrop:hover {
+  filter: grayscale(0%);
+}
+
+.form-modal .header-cross {
+  right: 8px;
+  top: 8px;
+}
+
+.form-backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
