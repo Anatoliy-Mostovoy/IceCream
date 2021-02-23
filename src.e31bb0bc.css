@@ -5620,7 +5620,6 @@ Copyright (c) 2013 Daniel Eden
 }
 
 .form-input {
-  box-sizing: border-box;
   width: 100%;
   border: 1px solid #907e82;
   outline: 1px solid transparent;
@@ -5638,7 +5637,7 @@ Copyright (c) 2013 Daniel Eden
 }
 
 .buy-textarea {
-  box-sizing: border-box;
+  resize: none;
   display: block;
   width: 100%;
   padding: 5px 15px;
