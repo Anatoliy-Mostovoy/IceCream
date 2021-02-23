@@ -1,33 +1,35 @@
-.passport-backdrop {
+.header-backdrop {
   position: fixed;
   top: 0;
   width: 100vw;
   height: 100vh;
-  background-color: $secondary-text-color;
-  z-index: 1001;
-  padding: 50px 50px;
+  background-color: $icons-background;
+  z-index: 1002;
+  padding: 50px 0;
 }
 
-.passport-modal {
-  position: relative;
-  width: 600px;
-  height: 100%;
-  margin-left: auto;
-  margin-right: auto;
+.header-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+
   background-color: $white-text-color;
   border-radius: 22px;
   overflow: hidden;
   opacity: 1;
   scale: 1;
   @include transition(scale, opacity);
+  padding: 0 0 15px;
 }
 
-.passport-backdrop.is-hidden .passport-modal {
+.header-backdrop.is-hidden .header-modal {
   opacity: 0;
   scale: 0.7;
 }
 
-.passport-cross {
+.header-cross {
   @extend %flex-center;
   position: absolute;
   border-radius: 50%;
@@ -35,14 +37,22 @@
   right: 10px;
   top: 10px;
   padding: 0;
-  width: 40px;
-  height: 40px;
+  width: 25px;
+  height: 25px;
   background-color: $secondary-text-color;
+  cursor: pointer;
+  outline: 1px solid transparent;
+  transform: rotate(0deg);
+  @include transition(background-color);
+  &:hover,
+  &:focus {
+    background-color: $header-button-revers;
+  }
 }
 
 .passport-img {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .passport-article {
@@ -54,19 +64,19 @@
 
 .passport-title {
   text-transform: uppercase;
-  font-size: 36px;
-  margin-bottom: 40px;
+  font-size: 26px;
+  margin-bottom: 20px;
   color: $header-button-revers;
 }
 
 .passport-text {
   color: $header-button-revers;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
 }
 
-.passport-backdrop.is-hidden {
+.header-backdrop.is-hidden {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;

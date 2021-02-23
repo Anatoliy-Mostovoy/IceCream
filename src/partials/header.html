@@ -35,7 +35,7 @@
         </svg>
       </button>
 
-      <button type="button" class="button">
+      <button type="button" class="button" data-modal-open-form>
         Buy now
         <svg class="button-icon">
           <use href="./images/symbol-defs.svg#icon-hulf-arrow" />
@@ -61,8 +61,8 @@
         <article class="hero-article">
           <h2 class="title-hidden">Lorem ipsum dolor sit amet</h2>
           <p class="text-article">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et
+            Grass-fed dairy and organic dairy cows provide milk significantly
+            higher in beneficial fatty acids and lower in omega-6.
           </p>
           <button class="btn" type="button" data-modal-open-hero>
             <svg class="btn-icon">
@@ -89,10 +89,10 @@
     </ul>
   </div>
 </header>
-<div class="passport-backdrop is-hidden" data-modal-hero>
-  <div class="passport-modal">
-    <button class="passport-cross" data-modal-close-hero>
-      <svg class="passport-icon" width="20" height="20">
+<div class="header-backdrop is-hidden" data-modal-hero>
+  <div class="header-modal">
+    <button class="header-cross" data-modal-close-hero>
+      <svg class="passport-icon" width="15" height="15">
         <use href="./images/symbol-defs.svg#icon-close" />
       </svg>
     </button>
@@ -105,9 +105,67 @@
       <h2 class="passport-title">Every cow is unique</h2>
       <p class="passport-text">
         Cattle must be identified with a pair of approved ear tags and have been
-        issued with a passport. This identity and documentation must stay with
-        the beast throughout its life.
+        issued with a passport.
       </p>
     </article>
+  </div>
+</div>
+<div class="form-backdrop is-hidden" data-modal-form>
+  <div class="form-modal">
+    <button class="header-cross" data-modal-close-form>
+      <svg class="passport-icon" width="15" height="15">
+        <use href="./images/symbol-defs.svg#icon-close" />
+      </svg>
+    </button>
+
+    <h2 class="form-title">Leave a request and we will contact you</h2>
+    <form class="form-buy">
+      <label class="form-lable">
+        <span class="form-text">Name</span>
+        <input
+          class="form-input"
+          type="text"
+          placeholder=" "
+          name="name"
+          placeholder=" "
+          autocomplete="on"
+        />
+      </label>
+      <label class="form-lable">
+        <span class="form-text">Phone</span>
+        <input
+          class="form-input"
+          type="tel"
+          placeholder=" "
+          name="name"
+          placeholder=" "
+          autocomplete="on"
+        />
+      </label>
+      <label class="form-lable">
+        <span class="form-text">Email</span>
+        <input
+          class="form-input"
+          type="email"
+          placeholder=" "
+          name="name"
+          placeholder=" "
+          autocomplete="on"
+        />
+      </label>
+      <label class="form-lable">
+        <span class="form-text">The product's name</span>
+        <textarea
+          class="buy-textarea"
+          placeholder=" "
+          name="comment"
+          rows="4"
+          placeholder="Enter text"
+        ></textarea>
+      </label>
+      <button aria-label="Buy" class="button button-revers" type="submit">
+        Submit
+      </button>
+    </form>
   </div>
 </div>
