@@ -4910,16 +4910,21 @@ Copyright (c) 2013 Daniel Eden
   border-radius: 50%;
   fill: #d41443;
   background-color: #ffffff;
+  outline: none;
 }
 .btn-icon {
   fill: currentColor;
   width: 20px;
   height: 12px;
 }
+.btn:hover, .btn:focus {
+  background-color: #ecebeb;
+}
 
 .header .btn {
   width: 18px;
   height: 18px;
+  outline: none;
   color: #d41443;
 }
 @media screen and (min-width: 1280px) {
@@ -4946,6 +4951,7 @@ Copyright (c) 2013 Daniel Eden
   padding: 0 37px;
   border-radius: 22px;
   border: 1px solid transparent;
+  outline: none;
   color: #d41443;
   background-color: #ffffff;
   font-family: DM Sans, sans-serif;
@@ -5028,6 +5034,23 @@ Copyright (c) 2013 Daniel Eden
 
 /*.header*/
 .button-revers:hover, .button-revers:focus {
+  background-color: #c7133e;
+}
+
+/*.button modal*/
+.modal-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border: none;
+  background-color: #d41443;
+  border-radius: 50%;
+  outline: none;
+}
+.modal-button:hover, .modal-button:focus {
   background-color: #c7133e;
 }
 
@@ -5424,17 +5447,6 @@ Copyright (c) 2013 Daniel Eden
   .modal-product {
     max-width: 1050px;
   }
-}
-
-.modal-button {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  width: 30px;
-  height: 30px;
-  border: none;
-  background-color: #c7133e;
-  border-radius: 50%;
 }
 
 .product-description {
