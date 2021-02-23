@@ -11,17 +11,25 @@
   fill: $primary-title-color;
 
   background-color: $white-text-color;
+  outline: none;
 
   &-icon {
     fill: currentColor;
     width: 20px;
     height: 12px;
   }
+
+  &:hover,
+  &:focus {
+    background-color: $button-hover-color;
+  }
 }
 
 .header .btn {
   width: 18px;
   height: 18px;
+
+  outline: none;
 
   color: $primary-title-color;
   @media screen and (min-width: $desktop) {
@@ -48,6 +56,7 @@
   padding: 0 37px;
   border-radius: 22px;
   border: 1px solid transparent;
+  outline: none;
 
   color: $primary-title-color;
   background-color: $white-text-color;
@@ -135,6 +144,27 @@
 
 /*.header*/
 .button-revers {
+  &:hover,
+  &:focus {
+    background-color: $header-button-revers;
+  }
+}
+
+/*.button modal*/
+.modal-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+
+  border: none;
+  background-color: $primary-title-color;
+  border-radius: 50%;
+  outline: none;
+
   &:hover,
   &:focus {
     background-color: $header-button-revers;
