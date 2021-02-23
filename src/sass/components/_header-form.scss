@@ -69,7 +69,6 @@
 }
 
 .form-input {
-  box-sizing: border-box;
   width: 100%;
 
   border: 1px solid $secondary-text-color;
@@ -86,7 +85,7 @@
 }
 
 .buy-textarea {
-  box-sizing: border-box;
+  resize: none;
   display: block;
   width: 100%;
   padding: 5px 15px;
