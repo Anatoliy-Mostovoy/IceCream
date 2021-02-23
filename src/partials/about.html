@@ -1,5 +1,5 @@
 <!-- About (How It`s Made?) -->
-<section class="about">
+<section class="about" >
   <div class="container">
     <!-- Title -->
     <div class="section-label" id="how-made">
@@ -10,7 +10,7 @@
     <!-- Description -->
     <div class="description-block">
       <div class="description-thumb animated zoomIn wow" data-wow-delay="250ms">
-        <picture>
+        <picture id="cow">
           <source
             srcset="
               ./images/mobile/milk-cow.png    1x,
@@ -61,12 +61,16 @@
           Aliquam erat volutpat. Aenean accumsan.
         </p>
 
-        <button class="button about-button" type="button" aria-label="Read more">
+        <button id="cow" data-about-open class="button about-button" type="button" aria-label="Read more">
           Read more
           <svg class="button-icon about-icon" width="8" height="10">
             <use href="./images/symbol-defs.svg#icon-hulf-arrow" />
           </svg>
         </button>
+
+        <audio id="cowAudio">
+          <source src="./sound/cow.mp3" type="audio/mpeg"/>
+        </audio>
       </div>
     </div>
   </div>
