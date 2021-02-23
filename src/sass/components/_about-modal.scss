@@ -1,0 +1,47 @@
+.about-modal {
+  position: relative;
+  width: 100%;
+  padding: 60px 20px;
+
+  background-color: $white-text-color;
+  border-radius: 24px;
+
+  transform: scale(1);
+  @include transition(transform);
+
+  .backdrop.is-hidden & {
+    transform: scale(0);
+  }
+
+  @media screen and (min-width: 480px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 400px;
+
+    transform: translate(-50%, -50%);
+
+    .backdrop.is-hidden & {
+      transform: translate(-50%, -50%) scale(0);
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 700px;
+  }
+
+  .section-label {
+    margin-bottom: 20px;
+  }
+
+  .section-title {
+    font-size: 30px;
+  }
+}
+
+.modal-text{
+  padding: 0 25px;
+  color: $text-color;
+  margin-bottom: 15px;
+}

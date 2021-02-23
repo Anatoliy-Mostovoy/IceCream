@@ -14,6 +14,7 @@
       <include src="./partials/products.html"></include>
       <include src="./partials/modal-product.html"></include>
       <include src="./partials/about.html"></include>
+      <include src="./partials/about-modal.html"></include>
       <include src="./partials/advantages.html"></include>
       <include src="./partials/gallery.html"></include>
       <include src="./partials/customer.html"></include>
@@ -46,5 +47,19 @@
     <script src="./js/slick.js"></script>
     <script src="./js/hero-modal.js"></script>
     <script src="./js/buy-form.js"></script>
+    <script src="js/hero-modal.js"></script>
+
+    <!-- Модалка- корова -->
+    <script src="js/about-modal.js"></script>
+
+    <!-- Мычание при открытии модалки -->
+    <script>
+      var cow = document.getElementById('cow'),
+      cowAudio = document.getElementById('cowAudio');
+      cow.addEventListener('click', fPlay, false);
+      function fPlay() {
+        cowAudio.play();
+      }
+  </script>
   </body>
 </html>
