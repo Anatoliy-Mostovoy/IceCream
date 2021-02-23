@@ -1,0 +1,73 @@
+.passport-backdrop {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: $secondary-text-color;
+  z-index: 1001;
+  padding: 50px 50px;
+}
+
+.passport-modal {
+  position: relative;
+  width: 600px;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: $white-text-color;
+  border-radius: 22px;
+  overflow: hidden;
+  opacity: 1;
+  scale: 1;
+  @include transition(scale, opacity);
+}
+
+.passport-backdrop.is-hidden .passport-modal {
+  opacity: 0;
+  scale: 0.7;
+}
+
+.passport-cross {
+  @extend %flex-center;
+  position: absolute;
+  border-radius: 50%;
+  border: 0;
+  right: 10px;
+  top: 10px;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  background-color: $secondary-text-color;
+}
+
+.passport-img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.passport-article {
+  padding: 10px 15px;
+  font-family: $add-ffamily;
+  font-weight: $add-fweight;
+  text-align: center;
+}
+
+.passport-title {
+  text-transform: uppercase;
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: $header-button-revers;
+}
+
+.passport-text {
+  color: $header-button-revers;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.passport-backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}

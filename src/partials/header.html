@@ -64,7 +64,7 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et
           </p>
-          <button class="btn" type="button">
+          <button class="btn" type="button" data-modal-open-hero>
             <svg class="btn-icon">
               <use href="./images/symbol-defs.svg#icon-right-arrow"></use>
             </svg>
@@ -89,3 +89,25 @@
     </ul>
   </div>
 </header>
+<div class="passport-backdrop is-hidden" data-modal-hero>
+  <div class="passport-modal">
+    <button class="passport-cross" data-modal-close-hero>
+      <svg class="passport-icon" width="20" height="20">
+        <use href="./images/symbol-defs.svg#icon-close" />
+      </svg>
+    </button>
+    <img
+      class="passport-img"
+      src="./images/cow-pas.jpg"
+      alt="cow with documents"
+    />
+    <article class="passport-article">
+      <h2 class="passport-title">Every cow is unique</h2>
+      <p class="passport-text">
+        Cattle must be identified with a pair of approved ear tags and have been
+        issued with a passport. This identity and documentation must stay with
+        the beast throughout its life.
+      </p>
+    </article>
+  </div>
+</div>
