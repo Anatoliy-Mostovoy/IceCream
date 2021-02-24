@@ -5736,4 +5736,59 @@ Copyright (c) 2013 Daniel Eden
   margin-bottom: 15px;
 }
 
+.button-up {
+  position: fixed;
+  bottom: 30px;
+  right: 18px;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #d41443;
+  border-radius: 50%;
+  text-align: center;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1900;
+}
+@media screen and (min-width: 768px) {
+  .button-up {
+    right: 25px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .button-up {
+    right: 35px;
+    width: 60px;
+    height: 60px;
+  }
+}
+.button-up::before {
+  content: url("/icon-up-arrow-mobile.6257c155.png");
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (min-width: 1280px) {
+  .button-up::before {
+    content: url("/icon-up-arrow.7f217929.png");
+    width: 35px;
+    height: 35px;
+  }
+}
+.button-up:hover {
+  cursor: pointer;
+  background-color: #c7133e;
+}
+.button-up:active {
+  background-color: #c7133e;
+}
+.button-up.show {
+  opacity: 1;
+  visibility: visible;
+}
+
 /*# sourceMappingURL=/src.e31bb0bc.css.map */
