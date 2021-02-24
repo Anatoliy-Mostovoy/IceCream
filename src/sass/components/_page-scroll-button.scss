@@ -1,0 +1,61 @@
+.button-up {
+  position: fixed;
+  bottom: 30px;
+  right: 18px;
+
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+
+  background-color: $primary-title-color;
+  border-radius: 50%;
+
+  text-align: center;
+
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1900;
+
+  @media screen and(min-width: $tablet) {
+    right: 25px;
+  }
+
+  @media screen and(min-width: $desktop) {
+    right: 35px;
+
+    width: 60px;
+    height: 60px;
+  }
+
+  &::before {
+    content: url('../images/icon-up-arrow-mobile.png');
+    width: 20px;
+    height: 20px;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    @media screen and(min-width: $desktop) {
+      content: url('../images/icon-up-arrow.png');
+      width: 35px;
+      height: 35px;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: $header-button-revers;
+  }
+
+  &:active {
+    background-color: $header-button-revers;
+  }
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+}
